@@ -1,0 +1,15 @@
+# Nmap 7.92 scan initiated Mon Jan 31 10:28:16 2022 as: nmap -sS -sV -sC -p- -vvv -oN scanneo_lfi 10.0.160.9
+Nmap scan report for 10.0.160.9
+Host is up, received echo-reply ttl 63 (0.19s latency).
+Scanned at 2022-01-31 10:28:20 -05 for 245s
+Not shown: 65534 closed tcp ports (reset)
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 nginx 1.10.3
+|_http-title: echoCTF Articles
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: nginx/1.10.3
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jan 31 10:32:25 2022 -- 1 IP address (1 host up) scanned in 249.48 seconds

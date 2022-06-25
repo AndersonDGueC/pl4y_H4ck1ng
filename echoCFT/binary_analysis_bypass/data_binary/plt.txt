@@ -1,0 +1,53 @@
+
+binary_analysis_bypass:     formato del fichero elf64-x86-64
+
+
+Desensamblado de la sección .plt:
+
+0000000000401018 <.plt>:
+  401018:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5018 <_GLOBAL_OFFSET_TABLE_+0x18>
+  40101e:	66 90                	xchg   ax,ax
+  401020:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5020 <_GLOBAL_OFFSET_TABLE_+0x20>
+  401026:	66 90                	xchg   ax,ax
+  401028:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5028 <_GLOBAL_OFFSET_TABLE_+0x28>
+  40102e:	66 90                	xchg   ax,ax
+  401030:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5030 <_GLOBAL_OFFSET_TABLE_+0x30>
+  401036:	66 90                	xchg   ax,ax
+  401038:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5038 <_GLOBAL_OFFSET_TABLE_+0x38>
+  40103e:	66 90                	xchg   ax,ax
+  401040:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5040 <_GLOBAL_OFFSET_TABLE_+0x40>
+  401046:	66 90                	xchg   ax,ax
+  401048:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5048 <_GLOBAL_OFFSET_TABLE_+0x48>
+  40104e:	66 90                	xchg   ax,ax
+  401050:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5050 <_GLOBAL_OFFSET_TABLE_+0x50>
+  401056:	66 90                	xchg   ax,ax
+  401058:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5058 <_GLOBAL_OFFSET_TABLE_+0x58>
+  40105e:	66 90                	xchg   ax,ax
+  401060:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5060 <_GLOBAL_OFFSET_TABLE_+0x60>
+  401066:	66 90                	xchg   ax,ax
+  401068:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5068 <_GLOBAL_OFFSET_TABLE_+0x68>
+  40106e:	66 90                	xchg   ax,ax
+  401070:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5070 <_GLOBAL_OFFSET_TABLE_+0x70>
+  401076:	66 90                	xchg   ax,ax
+  401078:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5078 <_GLOBAL_OFFSET_TABLE_+0x78>
+  40107e:	66 90                	xchg   ax,ax
+  401080:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5080 <_GLOBAL_OFFSET_TABLE_+0x80>
+  401086:	66 90                	xchg   ax,ax
+  401088:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5088 <_GLOBAL_OFFSET_TABLE_+0x88>
+  40108e:	66 90                	xchg   ax,ax
+  401090:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5090 <_GLOBAL_OFFSET_TABLE_+0x90>
+  401096:	66 90                	xchg   ax,ax
+  401098:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a5098 <_GLOBAL_OFFSET_TABLE_+0x98>
+  40109e:	66 90                	xchg   ax,ax
+  4010a0:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a50a0 <_GLOBAL_OFFSET_TABLE_+0xa0>
+  4010a6:	66 90                	xchg   ax,ax
+  4010a8:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a50a8 <_GLOBAL_OFFSET_TABLE_+0xa8>
+  4010ae:	66 90                	xchg   ax,ax
+  4010b0:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a50b0 <_GLOBAL_OFFSET_TABLE_+0xb0>
+  4010b6:	66 90                	xchg   ax,ax
+  4010b8:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a50b8 <_GLOBAL_OFFSET_TABLE_+0xb8>
+  4010be:	66 90                	xchg   ax,ax
+  4010c0:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a50c0 <_GLOBAL_OFFSET_TABLE_+0xc0>
+  4010c6:	66 90                	xchg   ax,ax
+  4010c8:	ff 25 fa 3f 0a 00    	jmp    QWORD PTR [rip+0xa3ffa]        # 4a50c8 <_GLOBAL_OFFSET_TABLE_+0xc8>
+  4010ce:	66 90                	xchg   ax,ax

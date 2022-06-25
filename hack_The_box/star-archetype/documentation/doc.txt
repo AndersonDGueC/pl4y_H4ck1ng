@@ -1,0 +1,10 @@
+mssqlclient.py
+https://github.com/SecureAuthCorp/impacket/issues/613
+https://www.sans.org/blog/tds-mssql-and-python-oh-my/
+https://www.secureauth.com/labs/open-source-tools/impacket/
+Archtype HackTheBox
+https://systemweakness.com/archetype-hackthebox-walkthrough-be99a1fba8ea
+psexe.py
+https://thehackerway.com/2021/05/17/network-hacking-con-impacket-parte-2/
+ script can be used in order to search possible paths to escalate privileges on Windows hosts
+Winpeas

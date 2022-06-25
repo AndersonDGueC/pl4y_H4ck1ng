@@ -1,0 +1,4 @@
+https://redis.io/docs/manual/cli/
+https://lightrun.com/dev-tools/using-the-redis-command-line/
+https://linuxhint.com/see-all-redis-keys/
+https://linuxhint.com/redis-get-key/

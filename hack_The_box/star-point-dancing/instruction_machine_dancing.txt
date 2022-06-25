@@ -1,0 +1,8 @@
+list: -l
+workshares: What is the name of the share we are able to access in the end? 
+download files SMB: get
+1. apply nmap -sS -sV -sC -p 120-447 10.129.191.27(for this case) -vvv -oN scan_dancing 
+2. enter to list  server message block with smbclient -L //10.129.223.254/ -U " " 
+3. later smbclient //10.129.223.255/WorkShares -U " "
+4. apply ls and cd James.P 
+5. apply get to getting file flag.txt 

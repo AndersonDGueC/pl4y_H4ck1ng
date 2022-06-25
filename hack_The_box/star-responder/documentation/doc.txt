@@ -1,0 +1,21 @@
+-Responder
+https://medium.com/mii-cybersec/gaining-credentials-easily-with-responder-tool-b821f33e342b
+https://support.alertlogic.com/hc/en-us/articles/360004707492-Penetration-Testing-Tool-Responder
+https://www.hackplayers.com/2014/06/responder-desplega-servidores-falsos-en-red.html
+https://cyberarms.wordpress.com/2018/01/12/easy-creds-with-responder-and-kali-linux/
+-NTLM
+https://www.crowdstrike.com/cybersecurity-101/ntlm-windows-new-technology-lan-manager/
+https://doubleoctopus.com/security-wiki/protocol/nt-lan-manager/
+https://www.ionos.es/digitalguide/servidores/know-how/ntlm/
+-Parameters
+https://www.semrush.com/blog/url-parameters/
+-LFI
+https://book.hacktricks.xyz/pentesting-web/file-inclusion
+-hash algoritms
+https://medium.com/@petergombos/lm-ntlm-net-ntlmv2-oh-my-a9b235c58ed4
+-John the Ripper
+https://www.openwall.com/john/
+-Machine Responder
+https://systemweakness.com/responder-hackthebox-walkthrough-f5231615627f
+-port 5985 winrm 
+https://book.hacktricks.xyz/network-services-pentesting/5985-5986-pentesting-winrm

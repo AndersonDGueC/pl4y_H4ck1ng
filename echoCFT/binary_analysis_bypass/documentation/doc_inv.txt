@@ -1,0 +1,24 @@
+process analisys linux static binary
+https://stackoverflow.com/questions/1026066/how-to-analyze-binary-file
+How to crack a Binary File  Format
+http://www.iwriteiam.nl/Ha_HTCABFF.html
+Reverse enginneering  the Quark Xpress file format
+https://www.iwriteiam.nl/QX.html
+analyze file binary
+https://filext.com/
+10 ways to analyze binary files on Linux
+https://opensource.com/article/20/4/linux-binary-analysis
+How to Peek Inside Binary Files From Linux Command Line
+https://www.howtogeek.com/672345/how-to-peek-inside-binary-files-from-the-linux-command-line/ 
+Executable and linkable Format 101 Part 4: Dynamic linking(anex)
+https://www.intezer.com/blog/malware-analysis/executable-linkable-format-101-part-4-dynamic-linking/
+HiddenWasp Malware Sting Targeted Linux System
+https://www.intezer.com/blog/malware-analysis/hiddenwasp-malware-targeting-linux-systems/
+How programs get run: ELF binaries
+https://lwn.net/Articles/631631/
+RELRO: RELocation Read-Only
+https://hockeyinjune.medium.com/relro-relocation-read-only-c8d0933faef3
+gdb desassemble
+https://stackoverflow.com/questions/6441721/can-i-give-objdump-an-address-and-have-it-disassemble-the-containing-function
+objdump -M intel
+https://stackoverflow.com/questions/43136917/what-are-these-extra-instructions-when-disassembling-simple-binary

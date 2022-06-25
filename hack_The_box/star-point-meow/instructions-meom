@@ -1,0 +1,3 @@
+1. apply nmap and I get it open port 23 with service telnet
+2. apply in console: telnet -l root IP PORT
+

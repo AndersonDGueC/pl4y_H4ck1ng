@@ -1,0 +1,1 @@
+# Nmap 7.92 scan initiated Sat May  7 18:46:37 2022 as: nmap -sS -sV -sC -p- -vvv -oN scanner_nopal 10.0.30.124

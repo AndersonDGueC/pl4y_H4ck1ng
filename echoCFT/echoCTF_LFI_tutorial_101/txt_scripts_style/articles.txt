@@ -1,0 +1,5 @@
+<h2>What is local file inclusion ?</h2>
+<p> 
+An attacker can use Local File Inclusion (LFI) to trick the web application into exposing or running files on the web server. An LFI attack may lead to information disclosure, remote code execution, or even Cross-site Scripting (XSS). Typically, LFI occurs when an application uses the path to a file as input. If the application treats this input as trusted, a local file may be used in the include statement.
+<br><br> <b><font color=yellow> source: https://www.acunetix.com/blog/articles/local-file-inclusion-lfi/ </font></b>
+<br><br> Date: 11/18/2019</p>

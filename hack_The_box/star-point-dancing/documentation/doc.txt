@@ -1,0 +1,8 @@
+https://ayudaleyprotecciondatos.es/2021/03/04/protocolo-smb/
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-samba-share-for-a-small-organization-on-ubuntu-16-04
+https://techtalk.gfi.com/scanning-open-ports-in-windows-part-3-nmap/
+https://www.techtarget.com/searchnetworking/definition/Server-Message-Block-Protocol
+https://visualitynq.com/resources/articles/what-is-smb-what-it-decision-makers-need-to-know/
+https://systemweakness.com/htb-starting-point-tier-0-walkthroughs-4a8e6f378fa6
+https://www.varonis.com/blog/smb-port
+https://unix.stackexchange.com/questions/65106/accessing-a-smb-share-without-a-password

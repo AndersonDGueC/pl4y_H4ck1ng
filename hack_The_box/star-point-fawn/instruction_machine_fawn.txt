@@ -1,0 +1,4 @@
+1. typing code in the console
+nmap -sS -sV -sC -p 21 10.129.88.119 (in this case) -vvv -oN scan_fawn
+2. access to ftp with user Anonymous
+3. downloading flag.txt with command line ftp>get flag.txt

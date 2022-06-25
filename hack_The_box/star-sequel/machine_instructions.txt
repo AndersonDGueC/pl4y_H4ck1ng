@@ -1,0 +1,11 @@
+1. install dependency mysql or mongodb( see documentation/doc.txt)
+2. apply command nmap, I see open port 3306 database
+3. connect with command: mysql -h <IP for this case> -u root
+4. you'll search database on mysql monitor
+5. apply command line mysql> show databases; or show schemas;
+6. after typing  use htb;
+7. show tables;
+8. describe users;  
+9. view tables with command SELECT * FROM users;
+10 and SELECT * FROM config;
+11. 7b4bec00d1a39e3dd4e021ec3d915da8

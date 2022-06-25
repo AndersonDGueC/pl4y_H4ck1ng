@@ -1,0 +1,6 @@
+https://es.wikipedia.org/wiki/Memcached
+https://memcached.org
+https://techleader.pro/a/90-Accessing-Memcached-from-the-command-line
+https://stackoverflow.com/questions/19560150/get-all-keys-set-in-memcached
+https://bobcares.com/blog/memcached-list-all-keys/
+https://blog.cloudflare.com/memcrashed-major-amplification-attacks-from-port-11211/

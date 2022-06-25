@@ -1,0 +1,39 @@
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+START_TIME: Sun Jan 30 17:01:20 2022
+URL_BASE: http://10.0.160.9/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+                                                                           GENERATED WORDS: 4612
+
+---- Scanning URL: http://10.0.160.9/ ----
+                                                                                                                                                      ==> DIRECTORY: http://10.0.160.9/articles/
+                                                                           ==> DIRECTORY: http://10.0.160.9/images/
++ http://10.0.160.9/index.php (CODE:200|SIZE:1375)                        
+                                                                           ==> DIRECTORY: http://10.0.160.9/layout/
+                                                                          
+---- Entering directory: http://10.0.160.9/articles/ ----
+                                                                           + http://10.0.160.9/articles/index.html (CODE:200|SIZE:0)                 
+                                                                          
+---- Entering directory: http://10.0.160.9/images/ ----
+                                                                                                                                                      ==> DIRECTORY: http://10.0.160.9/images/demo/
++ http://10.0.160.9/images/index.html (CODE:200|SIZE:0)                   
+                                                                          
+---- Entering directory: http://10.0.160.9/layout/ ----
+                                                                           + http://10.0.160.9/layout/index.html (CODE:200|SIZE:0)                   
+                                                                           ==> DIRECTORY: http://10.0.160.9/layout/scripts/
+                                                                           ==> DIRECTORY: http://10.0.160.9/layout/styles/
+                                                                          
+---- Entering directory: http://10.0.160.9/images/demo/ ----
+                                                                           + http://10.0.160.9/images/demo/index.html (CODE:200|SIZE:0)              
+                                                                          
+---- Entering directory: http://10.0.160.9/layout/scripts/ ----
+                                                                           + http://10.0.160.9/layout/scripts/index.html (CODE:200|SIZE:0)           
+                                                                          
+---- Entering directory: http://10.0.160.9/layout/styles/ ----
+                                                                           + http://10.0.160.9/layout/styles/index.html (CODE:200|SIZE:0)    

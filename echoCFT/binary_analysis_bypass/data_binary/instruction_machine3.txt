@@ -1,0 +1,33 @@
+linux static binary
+1. download file 
+2. verify what type file its
+3. apply command file <file name>
+4. later let's start with commnand ld then the file has dependecy library.
+5. each command was writer in file type .txt
+6. I tried apply command ltrace for I can view the file executable has path 
+of library but it's no dynamicall.
+7. apply command hexdump -C <file name> | head.
+8. so string <file name> and wrote file type .txt
+9. the .txt before apply cat <filename> | grep "ETSCTF"
+10. I know that file is a ELF (Executable and  Linkable File), apply command readelf 
+-h <filename> 
+11. command objdum -d <filename> 
+12. command readelf -h
+13. command readelf -S (section ELF)
+14. command readelf -l (segment ELF)  
+15. typing command objdump -x <filename> wrote in the file.txt with all headers
+16. apply objdump -M intel -d <filename> > objdump_elf_intel.txt
+17. apply objdump -sj <for example .rodata .text etc>  <filename>
+18. gdb -batch -ex 'file <file name>' -ex 'disassemble .rodata'
+17. give it chmod +x <ELF file name> and apply gdb -q
+18. typing break main
+19. apply info register or i r 
+20. apply i r eax and nexti.
+21. I want to find flag1; I was trying with gdb and other way was:
+22. I getting data_intel with command line objdump -M intel -Sj .data > 
+data_intel.txt
+23. in the function getting with objdump -M intel -Sj .text > text.txt
+24. Analyzing text.txt its function main and x375fc0ff33 in display
+print value uintMAX and x375fb33ff I saw m1 and m2 
+
+

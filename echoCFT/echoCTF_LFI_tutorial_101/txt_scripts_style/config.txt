@@ -1,0 +1,5 @@
+<?php
+
+$flag = "ETSCTF_FLAG_IN_CONF18_FILE";
+
+?>

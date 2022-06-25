@@ -1,0 +1,6 @@
+https://book.hacktricks.xyz/pentesting/pentesting-ssh
+https://www.cyberciti.biz/faq/how-to-use-sed-to-find-and-replace-text-in-files-in-linux-unix-shell/
+https://unix.stackexchange.com/questions/159367/using-sed-to-find-and-replace
+https://www.libssh.org/security/advisories/CVE-2018-10933.txt
+https://github.com/0xRar/FlandersWriteup
+

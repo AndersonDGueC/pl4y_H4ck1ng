@@ -1,0 +1,4 @@
+analyzer page web
+https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/
+gobuster
+https://patchthenet.com/articles/using-gobuster-to-find-hidden-web-content/

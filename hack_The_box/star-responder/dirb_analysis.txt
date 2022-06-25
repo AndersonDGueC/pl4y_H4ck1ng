@@ -1,0 +1,57 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirb_analysis.txt
+START_TIME: Thu Jun  2 16:49:56 2022
+URL_BASE: http://10.129.123.202/
+WORDLIST_FILES: /usr/share/wordlists/dirb/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://10.129.123.202/ ----
++ http://10.129.123.202/aux (CODE:403|SIZE:303)
++ http://10.129.123.202/cgi-bin/ (CODE:403|SIZE:303)
++ http://10.129.123.202/com1 (CODE:403|SIZE:303)
++ http://10.129.123.202/com2 (CODE:403|SIZE:303)
++ http://10.129.123.202/com3 (CODE:403|SIZE:303)
++ http://10.129.123.202/con (CODE:403|SIZE:303)
+==> DIRECTORY: http://10.129.123.202/css/
++ http://10.129.123.202/examples (CODE:503|SIZE:403)
+==> DIRECTORY: http://10.129.123.202/img/
+==> DIRECTORY: http://10.129.123.202/inc/
++ http://10.129.123.202/index.php (CODE:200|SIZE:61)
+==> DIRECTORY: http://10.129.123.202/js/
++ http://10.129.123.202/licenses (CODE:403|SIZE:422)
++ http://10.129.123.202/lpt1 (CODE:403|SIZE:303)
++ http://10.129.123.202/lpt2 (CODE:403|SIZE:303)
++ http://10.129.123.202/nul (CODE:403|SIZE:303)
++ http://10.129.123.202/phpmyadmin (CODE:403|SIZE:422)
++ http://10.129.123.202/prn (CODE:403|SIZE:303)
++ http://10.129.123.202/server-info (CODE:403|SIZE:422)
++ http://10.129.123.202/server-status (CODE:403|SIZE:422)
++ http://10.129.123.202/webalizer (CODE:403|SIZE:422)
+
+---- Entering directory: http://10.129.123.202/css/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://10.129.123.202/img/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://10.129.123.202/inc/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://10.129.123.202/js/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+-----------------
+END_TIME: Thu Jun  2 17:06:50 2022
+DOWNLOADED: 4612 - FOUND: 17

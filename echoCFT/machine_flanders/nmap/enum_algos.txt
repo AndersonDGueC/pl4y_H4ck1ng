@@ -1,0 +1,8 @@
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-20 18:25 -05
+Nmap scan report for 10.0.100.34
+Host is up (0.23s latency).
+
+PORT     STATE SERVICE
+6022/tcp open  x11
+
+Nmap done: 1 IP address (1 host up) scanned in 0.99 seconds

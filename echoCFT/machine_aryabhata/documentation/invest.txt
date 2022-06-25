@@ -1,0 +1,6 @@
+https://www.cve.org/CVERecord?id=CVE-2017-1001002
+https://jwlss.pw/mathjs/
+https://nodejs.org/api/process.html#process 
+https://man7.org/linux/man-pages/man7/signal.7.html
+https://wiremask.eu/writeups/reverse-shell-on-a-nodejs-application/
+https://github.com/appsecco/vulnerable-apps/tree/master/node-reverse-shell

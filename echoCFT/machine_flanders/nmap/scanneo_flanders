@@ -1,0 +1,14 @@
+# Nmap 7.92 scan initiated Sun Mar 20 17:23:57 2022 as: nmap -sS -sV -sC -p- -vvv -oN scanneo_flanders 10.0.100.34
+Nmap scan report for 10.0.100.34
+Host is up, received echo-reply ttl 63 (0.19s latency).
+Scanned at 2022-03-20 17:24:03 -05 for 339s
+Not shown: 65534 closed tcp ports (reset)
+PORT     STATE SERVICE REASON         VERSION
+6022/tcp open  ssh     syn-ack ttl 63 libssh 0.8.1 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 9c:42:2e:fa:60:30:95:dd:a0:60:80:1f:fd:ae:77:86 (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDF7bYwrFoV/ukt+Dv8+2ZbdxEoyYGkvq8tEO7cbR9jTl96QN//1v8lOw4o0b26uA7wHBWs5+zPZm6SeGIazx+Bj3mih6Oofm/9HU+FLHTCb+uo5kaG6v8g7gwjkoFNyx/rn+G+BKAMY6op4+6P6CqFFv1yfEhVWWqItla0kmfp3jwD1HCd/i0OxFsUN335RYeokeLqrG1kpoyVlsiqHMZWbz7DUDE2BjTVy1WcZAJtukCa7OHJKMZuh/AVCrCUuTrA3TRHJdl4+AR1GpI+UscHwmwZRsRsVAwgjC7v93fdD+zmrTth15XH7vXYkUK/ZAyaK8cAJOg2lCeNCwuw5OWh
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Mar 20 17:29:42 2022 -- 1 IP address (1 host up) scanned in 345.09 seconds

@@ -1,0 +1,11 @@
+Ninja Blog
+https://bitninja.com/blog/the-most-common-types-of-cyberattacks-4-sql-injection-attacks/
+Pentest-blog
+https://pentest-tools.com/blog/sql-injection-attacks
+slqi
+https://www.acunetix.com/websitesecurity/sql-injection2/
+PII
+https://www.dol.gov/general/ppii
+top-10 OWASP
+https://owasp.org/www-project-top-ten/
+https://www.veracode.com/security/owasp-top-10

@@ -1,0 +1,4 @@
+1. apply nmap -sS -sV -sC -p- 10.0.100.34 -vvv -oN scanneo_flanders
+2.typing ssh -p6022 root@10.0.100.34 
+3. apply nmap -p6022 10.0.100.34 --script ssh2-enum-algos = //retrieve supported algorythms
+

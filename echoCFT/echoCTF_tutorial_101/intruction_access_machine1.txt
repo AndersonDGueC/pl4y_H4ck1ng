@@ -1,0 +1,21 @@
+start
+1. conect with opnevpn to vpn of ctf-red
+2. on other console put code ifconfig  and verify vpn tun0
+3. see ping IP-machine
+4. later nmap -sS -sV -sC -p- IP -vvv -oN name_scanneo
+5. getting port 80 open, I saw message Hi there, 
+6. review js or front in browser and found first Flag
+7. apply software dirb, its objetive is probe any words how index.html in port 80
+8. where finally all nmap result are ready,I found other port open.
+9. this new ports, one can show me other flag, of course, I use curl
+9.1 curl 10.0.100.11 60123 
+10. other port 60321, it shows me a service python.
+11.get in to 10.0.100.11 port 60321 with tool nc (netcat)
+11.1 nc -v 10.0.100.11 60321
+12.in python open bash with
+12.1 import pty
+12.2 pty.spawn('\bin\bash')
+13. now with console python send this process to background
+14. apply in our console linux stty raw -echo
+15. next writing fg to add process in backgroung to frontground.
+16. search other flags

@@ -1,0 +1,9 @@
+1. apply nmap
+2. I found two ports, 10888 service http and 11211 memcached 
+3. add http://10.0.100.142:10888 and reading don't autorized access
+4. try it with other port get in http://10.0.100.142:11211
+5. I did with telnet with command telnet 10.0.100.142 11211
+6. add set of instructions memcached and continue with lru_crawler metadump all
+7. the before instruction, it give us: all keys dump out cache memory that are important
+8. apply in telnet add REMOTE_ADDR 0 0 11, the number eleven is IP's length
+9. in page with port 10888 I have access for ping, I search!! 

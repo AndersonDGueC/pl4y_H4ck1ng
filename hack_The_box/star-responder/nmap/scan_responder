@@ -1,0 +1,20 @@
+# Nmap 7.92 scan initiated Thu Jun  2 14:57:44 2022 as: nmap -sS -sV -sC -p- -vvv -oN scan_responder 10.129.123.202
+Nmap scan report for 10.129.123.202
+Host is up, received echo-reply ttl 127 (0.32s latency).
+Scanned at 2022-06-02 14:57:45 -05 for 695s
+Not shown: 65532 filtered tcp ports (no-response)
+PORT     STATE SERVICE    REASON          VERSION
+80/tcp   open  http       syn-ack ttl 127 Apache httpd 2.4.52 ((Win64) OpenSSL/1.1.1m PHP/8.1.1)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.52 (Win64) OpenSSL/1.1.1m PHP/8.1.1
+5985/tcp open  http       syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+7680/tcp open  pando-pub? syn-ack ttl 127
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun  2 15:09:20 2022 -- 1 IP address (1 host up) scanned in 696.36 seconds

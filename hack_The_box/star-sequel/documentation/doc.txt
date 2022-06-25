@@ -1,0 +1,2 @@
+Install sql in kali linux
+https://computingforgeeks.com/how-to-install-mysql-on-kali-linux/

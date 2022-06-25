@@ -1,0 +1,40 @@
+Local File Inclusion (LFI)
+-https://www.acunetix.com/blog/articles/local-file-inclusion-lfi/
+Remote Code Execution (RCE)
+-https://www.acunetix.com/blog/articles/code-injection/
+Remote File Inclusion (RFI)
+-https://www.acunetix.com/blog/articles/remote-file-inclusion-rfi/
+Cross-site Scripting (XSS)
+-https://www.acunetix.com/websitesecurity/cross-site-scripting/
+Directory Traversal Attacks
+-https://www.acunetix.com/websitesecurity/directory-traversal/
+Path Traversal
+-https://www.acunetix.com/websitesecurity/directory-traversal/
+An Introduction to Web Shell
+-https://www.acunetix.com/blog/articles/introduction-web-shells-part-1/
+Web Shells 101 Using PHP
+-https://www.acunetix.com/blog/articles/web-shells-101-using-php-introduction-web-shells-part-2/
+Keeping Web Shells Under Cover
+-https://www.acunetix.com/blog/articles/keeping-web-shells-undercover-an-introduction-to-web-shells-part-3/
+Web Shells in Action
+-https://www.acunetix.com/blog/articles/web-shells-action-introduction-web-shells-part-4/
+Web Shell Detection and Prevention
+-https://www.acunetix.com/blog/articles/detection-prevention-introduction-web-shells-part-5/
+PHP Security 1: SQL Injection
+-https://www.acunetix.com/websitesecurity/php-security-1/
+PHP Security 2: Directory Traversal & Code Injection (!important)
+-https://www.acunetix.com/websitesecurity/php-security-2/
+PHP Security 3: XSS and Password Storage
+-https://www.acunetix.com/websitesecurity/php-security-3/
+PHP Security 4: PHP security Best Practice (!important)
+-https://www.acunetix.com/websitesecurity/php-security-4/
+PHP Security 5: PHP Security Tips
+-https://www.acunetix.com/websitesecurity/php-security-5/
+Local file inclusion 2
+-https://cobalt.io/blog/a-pentesters-guide-to-file-inclusion
+Code Injection
+-https://cobalt.io/blog/a-pentesters-guide-to-code-injection
+Command Injection
+-https://cobalt.io/blog/a-pentesters-guide-to-command-injection
+Reverse Shell PHP
+-https://security.stackexchange.com/questions/126184/cant-get-a-reverse-shell-on-port-80

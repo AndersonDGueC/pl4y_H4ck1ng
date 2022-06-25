@@ -1,0 +1,15 @@
+# Nmap 7.92 scan initiated Sun Apr  3 09:57:19 2022 as: nmap -sS -sV -sC -p- -vvv -oN scanner_smithers 10.0.100.142
+Nmap scan report for 10.0.100.142
+Host is up, received echo-reply ttl 63 (0.19s latency).
+Scanned at 2022-04-03 09:57:24 -05 for 1032s
+Not shown: 65533 closed tcp ports (reset)
+PORT      STATE SERVICE   REASON         VERSION
+10888/tcp open  http      syn-ack ttl 63 nginx
+|_http-title: Network Tools
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+11211/tcp open  memcached syn-ack ttl 63 Memcached 1.5.12 (uptime 50665 seconds)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr  3 10:14:36 2022 -- 1 IP address (1 host up) scanned in 1037.20 seconds

@@ -1,0 +1,18 @@
+# Nmap 7.92 scan initiated Sun Apr  3 15:45:54 2022 as: nmap -sS -sV -sC -p- -vvv -oN scanner_aryabhata 10.0.30.60
+Nmap scan report for 10.0.30.60
+Host is up, received echo-reply ttl 63 (0.20s latency).
+Scanned at 2022-04-03 15:46:00 -05 for 737s
+Not shown: 65533 closed tcp ports (reset)
+PORT     STATE SERVICE REASON         VERSION
+80/tcp   open  http    syn-ack ttl 63 nginx 1.10.3
+|_http-title: Welcome to Aryabhata
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.10.3
+9229/tcp open  http    syn-ack ttl 63 nginx 1.10.3
+|_http-title: 502 Bad Gateway
+|_http-server-header: nginx/1.10.3
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr  3 15:58:17 2022 -- 1 IP address (1 host up) scanned in 743.56 seconds
