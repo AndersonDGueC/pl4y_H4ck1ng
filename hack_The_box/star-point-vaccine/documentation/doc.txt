@@ -1,0 +1,11 @@
+hack zip extract hash
+https://pentesting.mrw0l05zyn.cl/explotacion/ataques-de-contrasenas/fuera-de-linea-offline/archivos-zip
+hash
+https://www.techtarget.com/searchdatamanagement/definition/hashing
+crackstation hash
+https://crackstation.net
+sqlmap
+https://www.dragonjar.org/sqlmap-herramienta-automatica-de-inyeccion-sql.xhtml
+https://sqlmap.org/
+GTFOBins
+https://gtfobins.github.io/gtfobins/vim/
