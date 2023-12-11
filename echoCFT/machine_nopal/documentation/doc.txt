@@ -1,0 +1,3 @@
+explication vulnerability cacti 1.2.8
+https://shells.systems/cacti-v1-2-8-authenticated-remote-code-execution-cve-2020-8813/	
+

