@@ -1,2 +1,0 @@
-1. apply masscan -p0-65535 U:0-65535 10.129.195.74 -inte=1000 -e tun0
-2. later nmap -sS -sV -sC -p22,80 10.129.195.74 -vvv -oN scan_three

