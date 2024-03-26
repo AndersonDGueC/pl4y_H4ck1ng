@@ -1,0 +1,26 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: name_page2.txt
+START_TIME: Mon Mar 25 15:37:31 2024
+URL_BASE: http://10.0.160.56:1337/
+WORDLIST_FILES: /usr/share/dirb/wordlists/big.txt
+
+-----------------
+
+GENERATED WORDS: 20458
+
+---- Scanning URL: http://10.0.160.56:1337/ ----
+==> DIRECTORY: http://10.0.160.56:1337/public/
+==> DIRECTORY: http://10.0.160.56:1337/temp/
+
+---- Entering directory: http://10.0.160.56:1337/public/ ----
+
+---- Entering directory: http://10.0.160.56:1337/temp/ ----
+
+-----------------
+END_TIME: Mon Mar 25 18:49:20 2024
+DOWNLOADED: 61374 - FOUND: 0

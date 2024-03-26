@@ -1,0 +1,10 @@
+- Nikto v2.5.0/
++ Target Host: 10.0.160.56
++ Target Port: 5244
++ GET /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options: 
++ GET /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/: 
++ GET /: Retrieved access-control-allow-origin header: *.
++ KFWZILLO /: Web Server returns a valid response with junk HTTP methods which may cause false positives.
++ GET /gh/: This might be interesting: potential country code (Ghana).
++ POST /wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php: NextGEN Gallery LFI. See: https://seclists.org/fulldisclosure/2014/Feb/171: 
++ POST /wordpress/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_addgallery_page/static/jquery.filetree/connectors/jqueryFileTree.php: NextGEN Gallery LFI. See: https://seclists.org/fulldisclosure/2014/Feb/171: 

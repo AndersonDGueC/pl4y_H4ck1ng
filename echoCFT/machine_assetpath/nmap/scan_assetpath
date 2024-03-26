@@ -1,0 +1,28 @@
+# Nmap 7.92 scan initiated Tue Feb  6 18:24:58 2024 as: nmap -sS -sC -sV -p80,22 -vvv -oN scan_assetpath 10.0.160.82
+Nmap scan report for 10.0.160.82
+Host is up, received reset ttl 64 (0.26s latency).
+Scanned at 2024-02-06 18:24:59 -05 for 13s
+
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 51:13:46:dc:22:ca:11:80:3d:9d:0c:91:fe:d9:2e:ed (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDiCkt979VGEg1sIca/apCXk2IZCd23ujz/CpNHAn/GCwQGi+kXh9mp8L1zwbpjiWBukLt3ha0rlKSy8QAhRtrBf/XuTC7ve6iK6ChTSVmEd/x6hHHGmIFH7/v1s/zUOSYEQQFPW3dxP5oNcgYlYitGP83dRlnp7eHgTVzQVSTAhIY7A1mTvVu/vD8ppjqbHcU79VVPkFJ4aDPJ2awdDpK406J2SWmxlcPRpTews741/d7DbS+mzdxECGTCkxVwZDb4/xd+hdCKcCYXYAJnhCNdanrNtCoIIzxyDqzp8XeCsrktdWbT5Xgd8O8OYLj0ZZ1v4egK3Ni4hTp+foueMBwDyCJmTKVWnMuXeONBO+7KWXziggAeWU6c+OqopDSidr1GPOOd1YKjfK8R0eu3cL7slhkiCGTQa+tnMbc3+At8GUJLOYk1kcVO4IfyQBHeoqsPX3slwryijJ5Hn7gdTdVx0tJoHj5A/Zuew8tOYA9OEUUOEcOEHhdouAV7bWoBh0k=
+|   256 e0:0e:77:31:db:98:4b:40:3d:c4:e3:28:8f:ac:c5:f8 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPlsqAdZNj9Cs8a8Ry6TajgyL0pd00jYPjEDukqCpeW1daqhJhDBoHPIq13SLRAQF/8jYA0ZbmJ+BrNG2VkVhT4=
+|   256 1b:2f:dd:b6:ea:1a:41:3e:e7:ca:22:1c:3a:bc:1e:fc (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPGABj83aO8zIBAQIz8Q80czpbxWNlQU4vAb5aHV0JeR
+80/tcp open  http    syn-ack ttl 63 nginx 1.18.0
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-title: Asset Management System
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: nginx/1.18.0
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Feb  6 18:25:12 2024 -- 1 IP address (1 host up) scanned in 13.71 seconds

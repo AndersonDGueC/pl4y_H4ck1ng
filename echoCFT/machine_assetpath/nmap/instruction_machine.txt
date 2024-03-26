@@ -1,0 +1,2 @@
+1. masscan -p1-65535,U:1-65535 10.0.160.82 -inte=1000 -e tun0
+2.sudo nmap -sS -sC -sV -p80,22 10.0.160.82 -vvv -oN scan_assetpath

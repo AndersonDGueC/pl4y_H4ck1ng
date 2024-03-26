@@ -1,0 +1,66 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: name_page.txt
+START_TIME: Mon Mar 25 14:03:03 2024
+URL_BASE: http://10.0.160.56:5244/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://10.0.160.56:5244/ ----
++ http://10.0.160.56:5244/assets (CODE:301|SIZE:43)
++ http://10.0.160.56:5244/dav (CODE:401|SIZE:0)
++ http://10.0.160.56:5244/favicon.ico (CODE:302|SIZE:79)
++ http://10.0.160.56:5244/images (CODE:301|SIZE:43)
++ http://10.0.160.56:5244/p (CODE:301|SIZE:38)
+
+-----------------
+END_TIME: Mon Mar 25 14:17:56 2024
+DOWNLOADED: 4612 - FOUND: 5
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: name_page.txt
+START_TIME: Mon Mar 25 14:29:19 2024
+URL_BASE: http://10.0.160.56:1337/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://10.0.160.56:1337/ ----
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: name_page.txt
+START_TIME: Mon Mar 25 14:30:16 2024
+URL_BASE: http://10.0.160.56:5244/
+WORDLIST_FILES: /usr/share/dirb/wordlists/big.txt
+
+-----------------
+
+GENERATED WORDS: 20458
+
+---- Scanning URL: http://10.0.160.56:5244/ ----
++ http://10.0.160.56:5244/assets (CODE:301|SIZE:43)
++ http://10.0.160.56:5244/dav (CODE:401|SIZE:0)
++ http://10.0.160.56:5244/favicon.ico (CODE:302|SIZE:79)
++ http://10.0.160.56:5244/images (CODE:301|SIZE:43)
++ http://10.0.160.56:5244/p (CODE:301|SIZE:38)
+
+-----------------
+END_TIME: Mon Mar 25 15:35:17 2024
+DOWNLOADED: 20458 - FOUND: 5

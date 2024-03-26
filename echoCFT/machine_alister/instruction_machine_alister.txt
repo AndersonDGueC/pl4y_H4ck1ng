@@ -1,0 +1,11 @@
+apply command analyze ip 10.0.160.56
+with:
+0.1 masscan -p0-65535,U:1-65535 10.0.160.56 -inte=1000 -e tun0
+1.nmap -sS -sV -sC -p 1337,5244 -vvv -oN scanner_alister 10.0.160.56
+likely:
+2. gobuster dir -u http://10.0.160.56:5244 -w /usr/share/dirb/wordlist/big.txt -o option_page.txt
+3. dirb http://10.0.160.56:5244 /usr/share/wordlist/dirb/common.txt -o dirb_pager.txt
+4. nikto -h 10.0.160.56 --port 1337 -o scanAlisterweb2.txt
+5. version of software AList with 
+curl -s -X GET http://10.0.160.56:5244 | grep '<meta name="generator"'
+
