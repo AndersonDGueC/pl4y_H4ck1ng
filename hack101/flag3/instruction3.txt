@@ -3,3 +3,5 @@ name: micro-cmsv2
 test' UNION SELECT "pass" as password FROM admins WHERE '1'='1
 pass
 1.1 later to private page
+2. we used burpsuit for interviw traffic and copy request get and modify 
+with post and edit page.
