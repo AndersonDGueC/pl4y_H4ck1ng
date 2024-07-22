@@ -1,0 +1,6 @@
+Name: Trivial
+start viwe hints
+1. indicate source code
+2. in html see style label with backgroud.png
+3. copy and paste in url the page start
+4. find flag

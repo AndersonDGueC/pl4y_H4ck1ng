@@ -1,0 +1,6 @@
+name: Micro-CMSV1
+1.Hints:
+first flag was getting in url edit with sql injection: <url>/edit/1' <url>/edit/1'or1=1
+second flag was getting in <url>/edit/12 or trying 11, 10, ... 5
+third flag was getting in cross-site scripting edit page or create page.
+four flag was getting in modify function button of markdown with  onclick='alert(1)' 

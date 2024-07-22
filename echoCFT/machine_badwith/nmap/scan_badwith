@@ -1,0 +1,14 @@
+# Nmap 7.94SVN scan initiated Sun Jul 21 14:51:27 2024 as: nmap -sS -sV -sC -p 1337 -vvv -oN scan_badwith 10.0.160.83
+Nmap scan report for 10.0.160.83
+Host is up, received reset ttl 64 (0.19s latency).
+Scanned at 2024-07-21 14:51:34 -05 for 17s
+
+PORT     STATE SERVICE REASON         VERSION
+1337/tcp open  http    syn-ack ttl 63 Node.js Express framework
+| http-methods: 
+|_  Supported Methods: POST GET HEAD OPTIONS
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jul 21 14:51:51 2024 -- 1 IP address (1 host up) scanned in 23.67 seconds

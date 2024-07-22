@@ -1,0 +1,5 @@
+1. masscan -p0-65535,U:0-65535 10.0.160.83 -inte=1000 -e tun0
+2. nmap -sS -sV -sC -p 1337 -vvv -oN scan_badwith 10.0.160.83
+3. we used curl -X GET http://10.0.160:83:1337/
+4. curl -d 'ifname=wlan0' http://10.0.160.83:1337/
+

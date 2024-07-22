@@ -1,0 +1,30 @@
+
+You could try to use the showDirectoryPicker ponyfill from https://github.com/use-strict/file-system-access/tree/master.
+
+Example in index.html file that works for me:
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>HTML 5 Boilerplate</title>
+    </head>
+    <body>
+        <button onClick="showPicker()">Click mee</button>
+        <script type="module">
+            import { showDirectoryPicker } from 'https://cdn.jsdelivr.net/npm/file-system-access/lib/es2018.js';
+            const showPicker = async () => {
+                try {
+                    const handle = await showDirectoryPicker();
+                    console.log(handle);
+                } catch (e) {
+                    console.log(e);
+                }
+            };
+            window.showPicker = showPicker;
+        </script>
+    </body>
+</html>
