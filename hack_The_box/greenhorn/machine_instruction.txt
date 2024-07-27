@@ -2,7 +2,7 @@ greenhorn
 1.download vpn and typing sudo openvpn <file_name.ovpn> 
 2. apply sudo masscan -p0-65535,U0-65535 <ip_machine> -inte=1000 -e tun0
 3.nmap -sV -Pn -T5 -vvvv <ip_name>
-4. later nmap -sS -sV -sC -vvv -oN scan_greenhorn 10.10.11.25
+4. later nmap -sS -sV -sC -p 22,80,3000 -vvv -oN scan_greenhorn 10.10.11.25
 5. I don't acces only ip address then add ip in host and named
 with alias, in this case could be greenhorn.htb 
 the path to add alias is /etc/host

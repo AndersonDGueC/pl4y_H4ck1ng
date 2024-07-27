@@ -1,0 +1,3 @@
+permx
+1. apply nmap -sV -Pn T5 -vvvv 10.10.11.23 (test)
+2. now I knew that open port available.
