@@ -1,3 +1,6 @@
 permx
 1. apply nmap -sV -Pn T5 -vvvv 10.10.11.23 (test)
-2. now I knew that open port available.
+2. now I knew that open port available. typing:
+nmap -sS -sC -sV -p 22,80 -vvv -oN scan_permx 10.10.11.23 
+3. add ip in /etc/hosts
+4. apply dirb http://permx.htb -w /usr/share/dirb/wordlists/common.txt -o possible_category_permx.txt

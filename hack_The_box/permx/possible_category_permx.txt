@@ -1,0 +1,48 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: possible_category_permx.txt
+START_TIME: Sat Jul 27 17:02:59 2024
+URL_BASE: http://permx.htb/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+OPTION: Not Stopping on warning messages
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://permx.htb/ ----
+==> DIRECTORY: http://permx.htb/css/
+==> DIRECTORY: http://permx.htb/img/
++ http://permx.htb/index.html (CODE:200|SIZE:36182)
+==> DIRECTORY: http://permx.htb/js/
+==> DIRECTORY: http://permx.htb/lib/
++ http://permx.htb/server-status (CODE:403|SIZE:274)
+
+---- Entering directory: http://permx.htb/css/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://permx.htb/img/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://permx.htb/js/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://permx.htb/lib/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+==> DIRECTORY: http://permx.htb/lib/wow/
+
+---- Entering directory: http://permx.htb/lib/wow/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+-----------------
+END_TIME: Sat Jul 27 18:42:44 2024
+DOWNLOADED: 27672 - FOUND: 2

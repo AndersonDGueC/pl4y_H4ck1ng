@@ -1,0 +1,22 @@
+# Nmap 7.94SVN scan initiated Sat Jul 27 16:39:13 2024 as: nmap -sS -sC -sV -p 22,80 -vvv -oN scan_permx 10.10.11.23
+Nmap scan report for 10.10.11.23
+Host is up, received reset ttl 63 (0.21s latency).
+Scanned at 2024-07-27 16:39:20 -05 for 14s
+
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 e2:5c:5d:8c:47:3e:d8:72:f7:b4:80:03:49:86:6d:ef (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAyYzjPGuVga97Y5vl5BajgMpjiGqUWp23U2DO9Kij5AhK3lyZFq/rroiDu7zYpMTCkFAk0fICBScfnuLHi6NOI=
+|   256 1f:41:02:8e:6b:17:18:9c:a0:ac:54:23:e9:71:30:17 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP8A41tX6hHpQeDLNhKf2QuBM7kqwhIBXGZ4jiOsbYCI
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.52
+|_http-title: Did not follow redirect to http://permx.htb
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+Service Info: Host: 127.0.1.1; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jul 27 16:39:34 2024 -- 1 IP address (1 host up) scanned in 21.00 seconds
