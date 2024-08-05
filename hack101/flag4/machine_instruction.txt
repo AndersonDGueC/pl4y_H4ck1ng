@@ -1,0 +1,7 @@
+name: Encrypted Pastebin
+
+first flag: your data post is take it and post it in browser
+there we saw  cipher url in base64 
+and omit ~~and enter again cipher url
+seconf flag: install padbuster and replace other symbols 
+of course in before flag post. ~ = ! / + -
