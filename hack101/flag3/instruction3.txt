@@ -5,3 +5,17 @@ pass
 1.1 later to private page
 2. we used burpsuit for interviw traffic and copy request get and modify 
 with post and edit page.
+3. to capture flag 3 with burpsuit, follow the steps:
+capture package trying loggin in the system.
+copy the content package in intruder and repetear in burpsuit
+4. edit content package with sql injection, start with command
+' or LENGTH(username)=§1§#&password= (the file named test1)
+5. add ten numbers for  the test and finally run attack
+6. I see the length the package in this case is 8 which size was 598 to comparetion with 
+for other case 594
+7. for this case password, it's same, number 8.
+apply command: ' or LENGTH(password)=§1§#&password=
+8.the files named test_1 and test_2
+8.1 error echoctf/the_bin_in_the-dump
+9. git log
+10. with command git reset --hard HEAD~1 OR <SHA1>
