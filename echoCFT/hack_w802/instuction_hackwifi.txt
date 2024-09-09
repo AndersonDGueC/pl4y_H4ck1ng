@@ -1,4 +1,23 @@
 1. verify NIC wlan0 in mode monitor
+1.1 other interface wifi is enable, if you was typing (2)
+it's possible desenable wifi, use ifup<name_interface_fail>
+in other case ifdown<name_interface_fail> with software
+*wpa_supplicant its configuration are
+*wpa_supplicant.conf is the configuration file describing all networks that the user wants the computer to connect to. Run the following command to create this file. Replace ESSID and Wi-fi passphrase with your own. 
+/etc/wpa_supplicant/wpa_supplicant.conf
+The output will be piped to tee which then write to /etc/wpa_supplicant.conf file. Now use the following command to connect your wireless card to wireless access point.
+sudo wpa_supplicant -c /etc/wpa_supplicant.conf -i <name_interface>
+sudo wpa_supplicant -B -c /etc/wpa_supplicant.conf -i <name_interface> Background
+Although we’re authenticated and connected to wireless network, but we don’t have an IP address yet. To obtain a private IP address from DHCP server, use the following command:
+sudo dhclient <name_interface>
+wpa_passphrase your-ESSID your-passphrase | sudo tee /etc/wpa_supplicant.conf
+#other command configuration net:
+-sudo ifconfig <name_interface> up
+Then find your wireless network name by scanning nearby networks
+with command below:
+
+sudo iwlist <name_interface> scan | grep ESSID
+ 
 2. typing iwconfig
 3. later airmon-ng check kill
 4. iwconfig
