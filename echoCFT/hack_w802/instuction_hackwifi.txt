@@ -17,7 +17,8 @@ Then find your wireless network name by scanning nearby networks
 with command below:
 
 sudo iwlist <name_interface> scan | grep ESSID
- 
+ ****active my service network once apply sudo airmon-ng check kill
+ **** sudo systemctl start NetworkManager.service
 2. typing iwconfig
 3. later airmon-ng check kill
 4. iwconfig

@@ -1,0 +1,15 @@
+typing:
+1.sudo bettercap -iface <module_usb_monitor>
+2. wifi.recon on -->scan network avaible
+3. events.stream off ->stop events
+4. wifi.show->show all wifi and clients
+5. wifi.deauth all ->trying all clients connect
+6. wifi.show
+
+other 
+5. wifi.assoc all -> reemplace all by mac 
+6. wifi.show
+7. event.stream on -> again show streams
+8. event.stream off
+9. exit
+descipher handshake with hashcat

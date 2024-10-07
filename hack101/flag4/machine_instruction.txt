@@ -5,3 +5,15 @@ there we saw  cipher url in base64
 and omit ~~and enter again cipher url
 seconf flag: install padbuster and replace other symbols 
 of course in before flag post. ~ = ! / + -
+
+b64d = lambda x: base64.decodestring(x.replace('~', '=').replace('!', '/').replace('-', '+'))
+
+typing in line command:
+paddbuster <url> and data_before_encoded reemplace 
+
+example real:
+padbuster https://f7328407caa8844f31e15f3f09a31dbe.ctf.hacker101.com/?post=ofophjz3D0BBxtzgPuuYGkyra/CAo5S/sQrMfQKgU2q/e7TB/1q3NzS4zKLzl3cfCAZPbYYNkzgxeVRKdAvhvRZ0jJmdx0QA/xkdMMXgIkP3nLPJ93xGiFEwwttqjfFap3tiX6tUSo44+tyhEjkqdz6DLk6A/aZ+YLeLAWzp9PYGDeoUCygjhh8Q07fZxkvsrcjmz0s+2LLmcqAQoODqcg== ofophjz3D0BBxtzgPuuYGkyra/CAo5S/sQrMfQKgU2q/e7TB/1q3NzS4zKLzl3cfCAZPbYYNkzgxeVRKdAvhvRZ0jJmdx0QA/xkdMMXgIkP3nLPJ93xGiFEwwttqjfFap3tiX6tUSo44+tyhEjkqdz6DLk6A/aZ+YLeLAWzp9PYGDeoUCygjhh8Q07fZxkvsrcjmz0s+2LLmcqAQoODqcg== 16 -encoding
+
+Decrypt value in ASCII:
+{"flag": "^FLAG^643b962cea1b72784039a8091a77a56001f27018829ffdb643de0806bde4f91f$FLAG$", "id": "2", "key"
+: "HbuRRvLS9cD3Uh!KLhOI7~~"} 

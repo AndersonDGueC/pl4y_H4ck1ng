@@ -1,0 +1,1 @@
+sudo airodump-ng --channel 7 --bssid F4:95:1B:F5:A8:28 --write Desktop/ wlx44334c61c49a

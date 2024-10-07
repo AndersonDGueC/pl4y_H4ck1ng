@@ -1,0 +1,187 @@
+Crypto crash course
+
+XOR Most of you are probably familiar with XOR construct.
+This bitwise operator performs this operation
+two bits
+
+-The ability to reverse itself
+
+Trillion Dollar Question
+Due to the fact that we don't really want to pass around 
+massive keys to everyone we want to communicate
+securely with, the question becomes:
+how can we, with the highest assurance of safety
+and the least amount of time, share keys with all
+the relevant parties?
+
+The entire field of cryptography exists to answer
+that question. Then we poke holes in the answers.
+
+
+Types of ciphers
+
+-Symetric -- Both sides share the same key
+*stream  --Encrypts data byte-by-byte
+	The most common one you'll see is RC4, which is often used in SSL
+	The basic construction is essentially a random number generator seeded
+	with your key, which generates bytes that are
+	XORed with each byte of plaintext for encryption.
+	Decryption is simply XORing the ciphertext instead. This means that
+	both operations are identical.
+
+	The strength of the algorithm is then solely
+	dependent on the quality of the randomness. The better the quality 
+	of the random output, the strong the encryption.
+	
+*block --Encrypts data block-by-block
+	More familiar to most people. AES(Rijindael), DES, 3DES, Twofish, etc.
+	In Block cipher, you split your data into N-byte blocks and encrypt
+	those sepately. Because we can't assume that all data is multiple 
+	of N-bytes long, we have to pad data introducing complexity.
+	In addition, the encryption and decryption processes are not 
+	the same.
+
+	ECB(Electronic CodeBook) Mode: Is the most simple operation block cipher.
+	Each plaintext block is encrypted independently to produce a ciphertext
+	block.
+
+	This means that if you see two block with the same ciphertext, you know
+	that they must have had the same plaintext block is encrypted independently
+	to produce a ciphertext block.
+
+	This means that if you see two block with the same ciphertext, you know
+	that they must have had the same plaintext.
+
+	CBC Mode
+	Cipher-Block Chaining is perhaps the most common form you will see.
+	With CBC, each plaintext block is XORed with the ciphertext of
+	the previous block before encryption; the opposite is performed for
+	decryption. 
+	The first block is XORed with the IV, or Initialization Vector
+	Because of the fact that blocks are chained in this way, flipping one bit 
+	of ciphertext in block 0 will flip the same bit (position) of plaintext
+	in block 1 upon decryption.
+	This properity  makes for several interesting bugs
+	 
+-Asymetric -- Each side has their own private key
+and exchange public keys
+	each party of the communication has a public and private key component.
+	RSA is exemplary of this class of ciphers.
+	Asymetric ciphers are used for both encryption and signing (a process
+	that allows one party to validate the source of a message)
+
+	Generally, asymmetic ciphers are not used for encrypting data directly
+	due to performance concerns and complexity. Rather, you use them to
+	securely transmit a symmetric key.
+
+	Hashes
+Hashes are constructs that take in an arbitrary blobo of data and generate
+a fixed-size output, generally 128-512 bits, MD5, SHA1, SHA2, and other all
+hash functoins.
+
+Due to the fact that they take data of any size and produce a fixed-size output,
+all hash algorithms produce collisions --multiple inputs that produce the
+same output. The strength of a hash algorithm is in how hard it is to
+find such collisions.
+
+A hash on its own is really only useful for a single thing in cryptography:
+determing the integrity of data. If you are given a blob of data and its
+hash, its trivial to determine if the data has been tampered with in 
+transit
+
+It does not however, ensure that the hash itself is what was intended, nor
+does it authenticate a sender in any way.
+
+	MACs
+Message Authentication Codes are generally based on hashes, but allow for
+-- as the name implies -- message authentication.
+
+What this means is that given a MAC, you can ensure that  the data has not
+been tampered with, as well as valindating that MAC itself has not
+been manipuled.
+
+HMAC(key, message)=hash(key+hash(key+message))
+
+							CRIPTO ATTACKS
+
+Stream Cipher Reuse:
+But let's consider the case of two piece of data (A and B) being encrypted
+with the same key (K, generating stream S)
+
+ECB Block Reording 
+Since we know  that blocks encrypted with ECB are independent, there's nodthing
+stopping us from arbitrarily reordering them; they'll still 
+decrypted  properly if this happens.
+
+So consider a DES-ECB-encrypted cookie containg the following data.
+admin=0; username=daeken
+
+Because DES uses 8-byte blocks, this means we'd encrypted the following
+blocks (with @ as padding --we'll talk about that part lated):
+admin=0;
+username
+=@
+
+But let's say we control our username. We don't need to be able to encrypt
+or decrypt data to make ourselves an admin. If we set our username to
+paddingadmin=1; we get these blocks:
+admin=0;
+username
+=padding 
+admin=1;
+
+Once we have the encrypted form of this new cookie, we simply take 
+the last block and put it in place of the first. Suddendly, this
+decrypts to a valid admim cookie!
+
+THIS ATTACK IS ABSOLUTELY TRIVIAL AND INHERENT TO ECB	
+
+Likewise, if we have somo ability to decrypt ECB ciphertext,
+we can use the same block concept to decrypt other pieces of data.
+
+Simply take the ciphertext block in question and put it
+into the middle of data that you're able to decrypt.
+So long as they use the same key, this data will 
+decrypt cleanly and you're able to compromise the ciphertext
+in question.
+
+PKCS#7 
+the most common padding system you'll see in use is PKCS#7.
+and it's extraordinarily simple.
+if you need a byte of padding, it's a single 01 byte.
+if you need two bytes of padding, it's two 02 bytes.etc
+
+so if you have a block size of 8, here are some samples:
+daeken=>daejub\x02\x02
+
+Padding
+Now, padding has to be validate during decryption so that you can ensure that the 
+data was received properly; if there's a mismatch,
+something went wrong.
+
+In PKCS#7, you can simply look at the last byte of
+the last block and see how many padding bytes there are, then check that
+those all match.
+
+		CRYPTO WRAP-UP
+
+If you have control data of data being encrypted in some way (you don't have
+to control all the data), then repetition in the easiest way to 
+determine if ECB mode is in use.
+
+Remember that with ECB, each block is encrypted independently.
+
+Notes on Padding Oracles
+1. Most importantly, padding oracles only come into play with 
+CBC mode, due to the XOR chaining nature of the mode.
+
+2.You must be able to manipulate the data. If there's 
+an HMAC (implemented properly!)
+then this is a no-go
+
+You must validate the HMAC before decrypting
+
+Padbuster: tool from GDS is great for exploiting 
+padding oracles and can successfully dectypt the data in 
+vulnerable pyaload in the vast majority of cases:
+	
