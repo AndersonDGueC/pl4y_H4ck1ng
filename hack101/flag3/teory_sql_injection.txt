@@ -1,0 +1,53 @@
+SQL Injection and Friend
+
+Directory Transversal:
+Is almost a "path injection" attack. By controlling path 
+construction, you're able to walk up the filesystem
+tree and control where file are being read/written.
+
+Mechanism
+As you may know, on most OSes there are two special 
+directories : . and ..
+
+The directory . is actually your current path, so
+/foo/bar/ ./ is really just /foo/bar/
+
+The directory .. is your parent directory, so
+/foo/bar/ ../ is really /foo/
+
+Impact
+As you can see from the previous example, the trivial cases
+here are ridiculously high impact:
+you can read any file on the server that the webserver
+process has permissions to read.
+
+This could reveal code, database file, personal 
+information, account details etc, etc.
+
+Important!!!
+Impact
+Consider a hypothetical site that allows you to upload
+and share documents. We already know that fileserving
+scripts like the one we looked at could 
+very  well vulnerable to directory traversal. What
+about uploads?
+Well, HTTP multipart uploads have a filename in their
+headers. What if you sent this one?
+../../../../../var/www/public/definitely_not_malicious.php
+
+Mitigation
+This is truly one of the easiest vulnerabilities to mitigate, 
+despite that it exists all over the place
+There are two ways to directly mitigate it:
+-Don't allow path separators(/ and \) at all,
+if users shouldn't be able to read/write/access
+files outside the path you're specifying
+-Simply strip instances of ../ or ..\ from paths
+
+Or there's the indirect --safer--approach:
+Don't allow user data to control paths whatsover.
+
+This is particulary relevant to file upload paths.
+Generate a filename based on the extension/MIME-type of the
+file, an md5 of the contents, etc 
+
