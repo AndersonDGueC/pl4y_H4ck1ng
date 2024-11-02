@@ -1,0 +1,25 @@
+Findings
+
+For the purposes of this course, you should include the following
+for each vulnerability:
+-Title --E.g. "Reflected Cross-Site Scripting in profiles"
+-severity
+-Description --Brief description of what the vulnerability is
+-Reproduction Steps --Brief description of how to reproduce
+the bug; preferably with a small proof of concept.
+-Impact -- What  can be done with the vulnerability?
+-Mitigation --How is it fixed?
+-Affected assets --Generally a list of affected URLs.
+
+**Severity**
+This is handled differently just about everywhere, but I recommed  basing 
+severity on difficulty of exploitation and potential business
+impact. The following rankings are what I use:
+
+-Informational --Issues  has no real impact.
+-Low --The business impact is minimal.
+-Medium --Potencial to cause harm to users, but not revealing data
+-High --Potencial to reveal user data or aids in exploitation of other
+vulnerabilies
+-Critical --High risk of personal/confidenctial data exposure, general 
+system compromise, and other severe impacts to the business.

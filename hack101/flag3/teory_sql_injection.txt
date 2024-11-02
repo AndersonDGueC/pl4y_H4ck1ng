@@ -51,3 +51,132 @@ This is particulary relevant to file upload paths.
 Generate a filename based on the extension/MIME-type of the
 file, an md5 of the contents, etc 
 
+SQL Refresher
+for the pursposes of this session, let's look at 3 types of SQL queries:
+-SELECT some columns here FROM some table
+WHERE some > columns AND here!=0;
+-UPDATE some_table SET some=1, columns=2,
+here=3 WHERE id=5;
+-INSERT INTO some_table (some columns, here)
+VALUES (1,2,3);
+
+Mitigation 
+Mitigation with SQL injection is, generally speaking, fairly easy and you have a few options:
+1. Ensure that all strings are  properly quoted and run through  the apropriate esacmping fucntion,
+e.g. mysql_real_escape_string() in PHP
+2. Use parameterized queries.
+3. Use an ORM for data access instead of direct queries.
+
+DETECTION
+The most common SQLi you'll find is in the conditions of a SELECT,
+so the simplest way to detect the presence of such bugs us through the 
+use of two payloads;
+-'OR 1='1 --This returns all rows (constant true)
+-'AND 0='1 --This returns no rows (constant false)
+These simple payloads can easily identify SQLi
+
+EXFILTATION
+Often, your goal with SQLi is to get data out of the system.
+There are a multitude of ways to do this, but 
+the simplest is generally a UNION. 
+Take this query:SELECT foo, bas, baz FROM 
+some_table WHERE foo='some input';
+That returns 3 columns of data.
+
+So knowing that we have 3 columns of data, we could try a
+payload such to create a query like this:
+
+SELECT foo, bar, baz FROM some_tabel WHERE foo='1'
+UNION SELECT 1,2,3; --';
+
+This will return an extra row containing the values (1,2,3);
+We can use this technique to select data from other tables too,
+as long as we match columns counts.
+
+*Blind SQL Injection
+What is it?
+
+We just covered the simple case of SQLi, but what is the
+"blind" part?
+
+Blind SQLi is when your input is being  inserted into
+a quert, but you can't directly see the results of the
+query.
+
+For instance, a login page might contain blind SQLi,
+in that you can only get back whether or not a login 
+has succeed.
+
+Types:
+There are two types of blind SQLi:
+
+1. Oracles--Where you're able to get back a binary
+condition; the query succeeded/returned results or not,
+2. Truly blind -- You see no difference whether the 
+query failed or not.
+
+Oracles:
+The login page scenario mentioned is a good 
+example of a blind SQLi oracle: the feedback 
+you get is either a successful authentication
+or a failed login.
+
+Truly Blind
+Truly blind SQLi is actually fairly rare, but 
+understanding how to exploit it is critical. It's been
+the key to many game-over attacks 
+I've performed in client testing in the past.
+
+A good example of this is a facility that logs web
+requests to the database as you interact with it.
+In this case, you'll never see the results of the
+query whatsover, nor will its failure impact 
+your use of the application.
+
+Detection database
+So being able to identity which DB the application
+is using is critical to easy exploitation.
+
+Detecting Database
+There are a couple triks here:
+
+- /*! comment here */ -- This looks like a normal
+comment to most DBs. but MySQL will include the 
+contents of the comment inline, if it has an
+exclamation point at the begining.
+
+-WAITFOR DELAY will work on MSSQL and fail 
+elsewhere
+
+-UTL_INADDR.get_host_address('google.com') will do
+a DNS request on Oracle.
+
+***Wraps us
+
+Review
+-Directory transversal
+--User input is used to build paths
+--Leads to arbitrary file reads/writes in many cases
+--The directory .. is always the parent
+
+-Command injection
+--User input gets injected into a command line that's being
+executed.
+--Often allows complete system compromise
+--Backticks, semicolon, pipes, and ampersands are your friends here.
+
+-SQL Injection
+--User data is put into SQL queries unescaped
+--Can allow destruction and exfiltration of data
+---In rare cases, it can even allow filesystem access
+or code execution.
+--Most typical is that you can see the results of your
+queries 
+--When you can't see them, you have blind SQLi
+
+-Blind SQLi
+--You can get data out one bit at a time.
+--Often slow but always dangerous.
+
+
+
