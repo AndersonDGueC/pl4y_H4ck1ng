@@ -1,0 +1,8 @@
+1. first blog, zone comments: apply <?php phpinfo() ?>
+2. second flag, in intruder web I can see <-- <a href="?page=admin.auth.inc">admin login</a> -->
+try in web and logged with admin admin and nothing then in url modify
+https://..../?page=admin.inc
+and woala privilege admin and second flag
+3. typing ?page=http://localhost/index
+and in intruder or code html I can see third flag.
+
