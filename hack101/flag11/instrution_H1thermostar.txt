@@ -1,0 +1,6 @@
+1. add tools android how dex2jar and jdgui
+2. change extension .apk to .zip and uncompressed
+3. apply d2j-dex2jar -d classes.dex
+4. open jd-gui and classes-dex2jar.jar
+5  search class hacker101 and PayloadRequest.class
+

