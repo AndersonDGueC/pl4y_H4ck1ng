@@ -1,0 +1,15 @@
+verify certificate application
+apksigner verify --print-cert <name app>.apk
+
+keytool -genkey -v -keystore demo-bypass.keystore -alias demobypass -keyalg RSA -keysize 2048 -validity 10000
+apktool b <name dir> -o <name dir -mod>.apk
+one option
+jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA256 -keystore demo-bypass.keystore <name dir -mod>.apk demobypass
+
+other option
+apksigner sign --ks <name-keystore>.jks <name app>.apk
+NOTE: before signer with apksigner use zipaling
+
+Optimization application
+
+zipalign -v 4 <name app-mod>.apk <name app-mod-aligned>.apk

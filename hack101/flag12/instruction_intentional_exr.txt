@@ -1,0 +1,6 @@
+download apk
+review android manifest where intente can access to URL
+adb shell am start -W -a "android.action.VIWEW" -d "https/level13.hacker101.com/flagBearer" com.hacker101.level13
+review code smali 
+apply hash a key and flagBeare append in the code java.
+

