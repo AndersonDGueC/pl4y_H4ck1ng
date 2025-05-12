@@ -1,0 +1,15 @@
+1. enumeration with javascript with code:
+const elements = document.getElementTagName("*")
+let text = "";
+for(i=0;i<elements.legth;i++){
+text += elements[i].tagName + "<br>";
+}
+
+document.write(text)
+
+Rendered
+HTML
+HEAD
+NONSCRIPT
+SCRIPT
+
