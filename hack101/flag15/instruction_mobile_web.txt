@@ -1,0 +1,13 @@
+1. download apk and apply unzip and d2j-dex2jar classes.dex
+2. read ccode and I saw hmac key, hmac is algorith to verify
+integrity data the storage to application or other site no sure
+also there are links web, edit and view, inspect html source
+in browser I can observed upload.php link
+apply zip-slip.zip vulnerability transversal directory this 
+can unzip file in directory no permit. 
+3. intercept with burpsuit request and add sign value hmac
+with data compress.
+4. Content-Disposition: form-data; name="hmac"
+signature value
+
+----------------code_request--
